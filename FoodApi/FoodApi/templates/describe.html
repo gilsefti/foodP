@@ -1,0 +1,21 @@
+<form role="form">
+    <div class="input-group">
+        <input type="text" class="form-control input-sm" placeholder="Dish">
+            <span class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="fa fa-search"></span>
+                    </button>
+            </span>
+    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h2 class="panel-title">Add a new dish <span class="fa fa-plus-square"></span></h2>
+        </div>
+    </div>
+</form>
+
+<div class="panel panel-default">
+    <div class="list-group">
+        <a ng-repeat="dish in dishes" ng-click="selectDishes(loc)" class="list-group-item" href="" >{{dish.name}}</a>
+    </div>
+</div>

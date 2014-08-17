@@ -1,0 +1,15 @@
+﻿<div class="panel panel-default">    
+    <div class="list-group">
+        <a ng-repeat="plate in LBPlates" ng-click="selectLocal(plate)" class="list-group-item" href="" >{{plate.Name}}</a>
+     </div>
+    <div class="form-group">
+        <input type="text" class="form-control " placeholder="User name" ng-model="credentials.UserName">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control " placeholder="Password" ng-model="credentials.Password">
+    </div>   
+    <button type="button" class="btn btn-primary btn-lg btn-block " ng-click="login()">
+        Login 
+        <!--<span class="fa fa-plus-square"></span>-->
+    </button>
+</div>

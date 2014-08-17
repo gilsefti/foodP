@@ -1,0 +1,37 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lunch box">
+    <link rel="stylesheet" href="mobile-angular-ui/css/mobile-angular-ui-base.min.css">
+    <link rel="stylesheet" href="mobile-angular-ui/css/mobile-angular-ui-desktop.min.css">
+    <link href="css/lunch.css" rel="stylesheet"/>
+
+    <script  src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <script  src="js/ExternalServicesSql.js"></script>
+    <script src="templates/dataService.js"></script>
+    <script src="templates/locations.js"></script>
+    <script src="templates/dishes.js"></script>
+    <script  src="addDish.js"></script>
+
+    <!--    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>-->
+
+    <title>Home</title>
+</head>
+
+<body ng-app="dish" ng-controller="mainCtrl">
+
+<div class="well well-sm small-margin-bottom">
+    {{props.Title}}
+</div>
+<ng-view></ng-view>
+
+
+</body>
+
+</html>

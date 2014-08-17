@@ -1,0 +1,10 @@
+C:\foodApp\FoodBl\bin\Debug\FoodBl.dll.config
+C:\foodApp\FoodBl\bin\Debug\FoodBl.dll
+C:\foodApp\FoodBl\bin\Debug\FoodBl.pdb
+C:\foodApp\FoodBl\bin\Debug\EntityFramework.dll
+C:\foodApp\FoodBl\bin\Debug\EntityFramework.SqlServer.dll
+C:\foodApp\FoodBl\bin\Debug\EntityFramework.xml
+C:\foodApp\FoodBl\bin\Debug\EntityFramework.SqlServer.xml
+C:\foodApp\FoodBl\obj\Debug\FoodBl.dll
+C:\foodApp\FoodBl\obj\Debug\FoodBl.pdb
+C:\foodApp\FoodBl\obj\Debug\FoodBl.csprojResolveAssemblyReference.cache

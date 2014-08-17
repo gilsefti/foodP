@@ -1,0 +1,9 @@
+C:\foodApp\FoodBl\bin\Release\FoodBl.dll.config
+C:\foodApp\FoodBl\bin\Release\FoodBl.dll
+C:\foodApp\FoodBl\bin\Release\FoodBl.pdb
+C:\foodApp\FoodBl\bin\Release\EntityFramework.dll
+C:\foodApp\FoodBl\bin\Release\EntityFramework.SqlServer.dll
+C:\foodApp\FoodBl\bin\Release\EntityFramework.xml
+C:\foodApp\FoodBl\bin\Release\EntityFramework.SqlServer.xml
+C:\foodApp\FoodBl\obj\Release\FoodBl.dll
+C:\foodApp\FoodBl\obj\Release\FoodBl.pdb

@@ -1,0 +1,15 @@
+﻿Generated model file: Food.edmx.
+Loading metadata from the database took 00:00:02.1906073.
+Generating the model took 00:00:02.2998753.
+Generated model file: Food.edmx.
+Loading metadata from the database took 00:00:00.8048500.
+Generating the model took 00:00:01.0359525.
+Generated model file: Food.edmx.
+Loading metadata from the database took 00:00:00.9055725.
+Generating the model took 00:00:01.5366878.
+Generated model file: Food.edmx.
+Loading metadata from the database took 00:00:01.3286546.
+Generating the model took 00:00:02.1244339.
+Generated model file: Food.edmx.
+Loading metadata from the database took 00:00:00.7851307.
+Generating the model took 00:00:01.4876107.
