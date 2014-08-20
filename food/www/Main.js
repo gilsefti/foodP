@@ -64,7 +64,8 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
              controller: 'addLBCtrl'
          });
 
-    $urlRouterProvider.otherwise('/Login');
+    //$urlRouterProvider.otherwise('/Login');
+    $urlRouterProvider.otherwise('/new/photo');
   
 
 });

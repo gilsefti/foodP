@@ -61,10 +61,14 @@
     <Content Include=".idea\food.iml" />
     <Content Include=".jshintrc" />
     <Content Include="AddTemplates\AddParent.html" />
+    <Content Include="AddTemplates\photo.js" />
     <Content Include="app.yaml" />
     <Content Include="cordova.js" />
+    <Content Include="cordova_plugins.js" />
     <Content Include="engineapp\app.yaml" />
     <Content Include="engineapp\index.yaml" />
+    <Content Include="index3.html" />
+    <Content Include="indexphot.html" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular.js" />
     <Content Include="LBTemplates\LBExternalSql.js" />
@@ -109,7 +113,6 @@
     <Content Include="mobile-angular-ui\fonts\fontawesome-webfont.svg" />
     <Content Include="mobile-angular-ui\js\mobile-angular-ui.js" />
     <Content Include="mobile-angular-ui\js\mobile-angular-ui.min.js" />
-    <Content Include="Index1.html" />
     <Content Include="dishServices.js" />
     <Content Include="AddTemplates\addLB.html" />
     <Content Include="AddTemplates\dishes.html" />
@@ -136,6 +139,9 @@
       <Project>{841319b4-d427-4eea-8bed-e36bd99be904}</Project>
       <Name>FoodBl</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".cordova\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

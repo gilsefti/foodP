@@ -126,10 +126,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Dal\Dal.csproj">
-      <Project>{2c289618-ab93-4e9d-a1d7-cf5e141ad861}</Project>
-      <Name>Dal</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\FoodBl\FoodBl.csproj">
       <Project>{841319b4-d427-4eea-8bed-e36bd99be904}</Project>
       <Name>FoodBl</Name>

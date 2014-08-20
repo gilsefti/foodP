@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="cordova.js"></script>
+    <script src="cordova_plugins.js"></script>
+    <script src="js/angular.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // Cordova is ready to be used!
+        //
+        function onDeviceReady() {
+            pictureSource = navigator.camera.PictureSourceType;
+            destinationType = navigator.camera.DestinationType;
+        }
+      
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+
+        var dish = angular.module("dish", []);
+        dish.config(['$compileProvider',
+    function ($compileProvider) {
+        //var currentImgSrcSanitizationWhitelist = $compileProvider.imgSrcSanitizationWhitelist();
+        //var newImgSrcSanitizationWhiteList = currentImgSrcSanitizationWhitelist.toString().slice(0, -1)
+        //+ '|blob:http'
+        //+ currentImgSrcSanitizationWhitelist.toString().slice(-1);
+        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
+        //console.log("Changing imgSrcSanitizationWhiteList from " + currentImgSrcSanitizationWhitelist + " to " + newImgSrcSanitizationWhiteList);
+        //$compileProvider.imgSrcSanitizationWhitelist(newImgSrcSanitizationWhiteList);
+    }
+        ]);
+
+        dish.controller('mainCtrl', function ($scope) {
+            $scope.addPhoto = function () {
+                // Retrieve image file location from specified source
+                navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+                    quality: 50,
+                    destinationType: destinationType.FILE_URI
+                });
+            }
+            function onPhotoURISuccess(imageURI) {
+                $scope.$apply(function () {
+                    $scope.photoSrc = imageURI;
+                });               
+            }
+        });
+
+       
+        </script>
+
+    <title></title>
+</head>
+<body ng-app="dish" ng-controller="mainCtrl">
+    <button type="button" ng-click="addPhoto()">
+        Add to Lunch Box
+    </button>
+    <img ng-src="{{photoSrc}}" />
+</body>
+</html>

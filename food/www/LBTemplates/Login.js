@@ -1,6 +1,7 @@
 var loginServices = angular.module('loginServices', []);
 loginServices.controller('loginCtrl', function ($scope, login, UserService, $state) {
     $scope.login = function () {
+       
         login.login($scope.credentials).then(function (d) {
             if (d.data.length == 0) {
                 UserService.user.isLogged = false;

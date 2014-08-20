@@ -1,8 +1,7 @@
-<div class="well well-lg">
-    <button type="button" class="btn btn-primary btn-lg btn-block " ng-click='loadPhoto()'>
-        Take a photo
+<div class="panel panel-default">
+    <button type="button" class="btn btn-primary btn-lg btn-block " ng-click="addPhoto()">
+        Add to Lunch Box <span class="fa fa-camera"></span>
     </button>
-    <button type="button" class="btn btn-success btn-lg btn-block" ng-click='loadPhoto()'>
-        Add from memory
-    </button>
+    <img ng-src="{{photoSrc}}" />
 </div>
+

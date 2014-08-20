@@ -37,13 +37,11 @@ C:\foodAppP\food\www\bin\System.Web.Http.dll
 C:\foodAppP\food\www\bin\System.Web.Mvc.dll
 C:\foodAppP\food\www\bin\Newtonsoft.Json.dll
 C:\foodAppP\food\www\bin\System.Net.Http.Formatting.dll
-C:\foodAppP\food\www\bin\System.Web.Http.Cors.dll
 C:\foodAppP\food\www\bin\EntityFramework.dll
 C:\foodAppP\food\www\bin\System.Web.Http.WebHost.dll
 C:\foodAppP\food\www\bin\System.Web.Razor.dll
 C:\foodAppP\food\www\bin\System.Web.WebPages.Razor.dll
 C:\foodAppP\food\www\bin\System.Web.WebPages.dll
-C:\foodAppP\food\www\bin\System.Web.Cors.dll
 C:\foodAppP\food\www\bin\System.Web.WebPages.Deployment.dll
 C:\foodAppP\food\www\bin\FoodApi.pdb
 C:\foodAppP\food\www\bin\FoodBl.pdb
@@ -51,7 +49,6 @@ C:\foodAppP\food\www\bin\System.Web.Http.xml
 C:\foodAppP\food\www\bin\System.Web.Mvc.xml
 C:\foodAppP\food\www\bin\Newtonsoft.Json.xml
 C:\foodAppP\food\www\bin\System.Net.Http.Formatting.xml
-C:\foodAppP\food\www\bin\System.Web.Http.Cors.xml
 C:\foodAppP\food\www\bin\EntityFramework.xml
 C:\foodAppP\food\www\bin\System.Web.Http.WebHost.xml
 C:\foodAppP\food\www\bin\System.Web.Razor.xml
@@ -61,3 +58,6 @@ C:\foodAppP\food\www\bin\System.Web.WebPages.Deployment.xml
 C:\foodAppP\food\www\obj\Debug\FoodUi.csprojResolveAssemblyReference.cache
 C:\foodAppP\food\www\obj\Debug\FoodUi.dll
 C:\foodAppP\food\www\obj\Debug\FoodUi.pdb
+C:\foodAppP\food\www\bin\System.Web.Http.Cors.dll
+C:\foodAppP\food\www\bin\System.Web.Cors.dll
+C:\foodAppP\food\www\bin\System.Web.Http.Cors.xml

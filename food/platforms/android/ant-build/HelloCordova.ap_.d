@@ -27,13 +27,15 @@ C:\foodAppP\food\platforms\android\assets\www\FoodUi.csproj.user \
 C:\foodAppP\food\platforms\android\assets\www\FoodUi.sln \
 C:\foodAppP\food\platforms\android\assets\www\FoodUi.v12.suo \
 C:\foodAppP\food\platforms\android\assets\www\index.html \
-C:\foodAppP\food\platforms\android\assets\www\Index1.html \
+C:\foodAppP\food\platforms\android\assets\www\index3.html \
+C:\foodAppP\food\platforms\android\assets\www\indexphot.html \
 C:\foodAppP\food\platforms\android\assets\www\js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates \
 C:\foodAppP\food\platforms\android\assets\www\Main.js \
 C:\foodAppP\food\platforms\android\assets\www\mobile-angular-ui \
 C:\foodAppP\food\platforms\android\assets\www\obj \
 C:\foodAppP\food\platforms\android\assets\www\packages \
+C:\foodAppP\food\platforms\android\assets\www\plugins \
 C:\foodAppP\food\platforms\android\assets\www\Properties \
 C:\foodAppP\food\platforms\android\assets\www\test.html \
 C:\foodAppP\food\platforms\android\assets\www\test.js \
@@ -50,6 +52,7 @@ C:\foodAppP\food\platforms\android\assets\www\AddTemplates\locations.js \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\newDish.html \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\newLocation.html \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\photo.html \
+C:\foodAppP\food\platforms\android\assets\www\AddTemplates\photo.js \
 C:\foodAppP\food\platforms\android\assets\www\bin\Antlr3.Runtime.dll \
 C:\foodAppP\food\platforms\android\assets\www\bin\Dal.dll \
 C:\foodAppP\food\platforms\android\assets\www\bin\EntityFramework.dll \
@@ -455,6 +458,12 @@ C:\foodAppP\food\platforms\android\assets\www\packages\WebGrease.1.5.2\lib\WebGr
 C:\foodAppP\food\platforms\android\assets\www\packages\WebGrease.1.5.2\tools\install.ps1 \
 C:\foodAppP\food\platforms\android\assets\www\packages\WebGrease.1.5.2\tools\uninstall.ps1 \
 C:\foodAppP\food\platforms\android\assets\www\packages\WebGrease.1.5.2\tools\WG.exe \
+C:\foodAppP\food\platforms\android\assets\www\plugins\org.apache.cordova.camera \
+C:\foodAppP\food\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
+C:\foodAppP\food\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\Camera.js \
+C:\foodAppP\food\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraConstants.js \
+C:\foodAppP\food\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
+C:\foodAppP\food\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
 C:\foodAppP\food\platforms\android\assets\www\Properties\AssemblyInfo.cs \
 C:\foodAppP\food\platforms\android\assets\www\Properties\PublishProfiles \
 C:\foodAppP\food\platforms\android\assets\www\Properties\PublishProfiles\food.pubxml \
