@@ -387,7 +387,7 @@ function $Resolve(  $q,    $injector) {
         parent.then(done, fail);
       }
       
-      // Process each invocable in the plan, but ignore any where a local of the same name exists.
+      // Process each invocable in the plan, but ignore any where a serverUrl of the same name exists.
       for (var i=0, ii=plan.length; i<ii; i+=3) {
         if (locals.hasOwnProperty(plan[i])) done();
         else invoke(plan[i], plan[i+1], plan[i+2]);
@@ -491,7 +491,7 @@ function $Resolve(  $q,    $injector) {
    * @param {object} parent  a promise returned by another call to `$resolve`.
    * @param {object} self  the `this` for the invoked methods
    * @return {object} Promise for an object that contains the resolved return value
-   * of all invocables, as well as any inherited and local values.
+   * of all invocables, as well as any inherited and serverUrl values.
    */
   this.resolve = function (invocables, locals, parent, self) {
     return this.study(invocables)(locals, parent, self);

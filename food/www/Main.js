@@ -62,11 +62,15 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
              url: '/addLB',
              templateUrl: 'AddTemplates/addLB.html',
              controller: 'addLBCtrl'
-         });
+          }).state('new.fileLoad', {
+              url: '/fileLoad',
+              templateUrl: 'AddTemplates/fileLoad.html',
+              controller: 'fileLoadCtrl'
+          });
 
     //$urlRouterProvider.otherwise('/Login');
     $urlRouterProvider.otherwise('/new/photo');
-  
+    //$urlRouterProvider.otherwise('/new/fileLoad');
 
 });
 

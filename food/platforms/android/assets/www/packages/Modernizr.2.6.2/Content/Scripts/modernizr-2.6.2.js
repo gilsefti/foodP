@@ -783,7 +783,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     // Just FWIW: IE8 Compat mode supports these features completely:
     //   www.quirksmode.org/dom/html5.html
-    // But IE8 doesn't support either with local files
+    // But IE8 doesn't support either with serverUrl files
 
     tests['localstorage'] = function() {
         try {
@@ -927,7 +927,7 @@ window.Modernizr = (function( window, document, undefined ) {
                 inputs[ props[i] ] = !!bool;
             }
             return inputs;
-        })('search tel url email datetime date month week time datetime-local number range color'.split(' '));
+        })('search tel url email datetime date month week time datetime-serverUrl number range color'.split(' '));
         /*>>inputtypes*/
     }
     /*>>webforms*/

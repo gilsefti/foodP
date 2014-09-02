@@ -4831,22 +4831,22 @@ function $TemplateCacheProvider() {
  * when creating reusable components, which should not accidentally read or modify data in the
  * parent scope.
  *
- * The 'isolate' scope takes an object hash which defines a set of local scope properties
- * derived from the parent scope. These local properties are useful for aliasing values for
- * AddTemplates. Locals definition is a hash of local scope property to its source:
+ * The 'isolate' scope takes an object hash which defines a set of serverUrl scope properties
+ * derived from the parent scope. These serverUrl properties are useful for aliasing values for
+ * AddTemplates. Locals definition is a hash of serverUrl scope property to its source:
  *
- * * `@` or `@attr` - bind a local scope property to the value of DOM attribute. The result is
+ * * `@` or `@attr` - bind a serverUrl scope property to the value of DOM attribute. The result is
  *   always a string since DOM attributes are strings. If no `attr` name is specified  then the
- *   attribute name is assumed to be the same as the local name.
+ *   attribute name is assumed to be the same as the serverUrl name.
  *   Given `<widget my-attr="hello {{name}}">` and widget definition
  *   of `scope: { localName:'@myAttr' }`, then widget scope property `localName` will reflect
  *   the interpolated value of `hello {{name}}`. As the `name` attribute changes so will the
  *   `localName` property on the widget scope. The `name` is read from the parent scope (not
  *   component scope).
  *
- * * `=` or `=attr` - set up bi-directional binding between a local scope property and the
+ * * `=` or `=attr` - set up bi-directional binding between a serverUrl scope property and the
  *   parent scope property of name defined via the value of the `attr` attribute. If no `attr`
- *   name is specified then the attribute name is assumed to be the same as the local name.
+ *   name is specified then the attribute name is assumed to be the same as the serverUrl name.
  *   Given `<widget my-attr="parentModel">` and widget definition of
  *   `scope: { localModel:'=myAttr' }`, then widget scope property `localModel` will reflect the
  *   value of `parentModel` on the parent scope. Any changes to `parentModel` will be reflected
@@ -4856,11 +4856,11 @@ function $TemplateCacheProvider() {
  *
  * * `&` or `&attr` - provides a way to execute an expression in the context of the parent scope.
  *   If no `attr` name is specified then the attribute name is assumed to be the same as the
- *   local name. Given `<widget my-attr="count = count + value">` and widget definition of
+ *   serverUrl name. Given `<widget my-attr="count = count + value">` and widget definition of
  *   `scope: { localFn:'&myAttr' }`, then isolate scope property `localFn` will point to
  *   a function wrapper for the `count = count + value` expression. Often it's desirable to
  *   pass data from the isolated scope via an expression and to the parent scope, this can be
- *   done by passing a map of local variable names and values into the expression wrapper fn.
+ *   done by passing a map of serverUrl variable names and values into the expression wrapper fn.
  *   For example, if the expression is `increment(amount)` then we can specify the amount value
  *   by calling the `localFn` as `localFn({amount: 22})`.
  *
@@ -6186,7 +6186,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             // For directives with element transclusion the element is a comment,
             // but jQuery .data doesn't support attaching data to comment nodes as it's hard to
             // clean up (http://bugs.jquery.com/ticket/8335).
-            // Instead, we save the controllers for the element in a local hash and attach to .data
+            // Instead, we save the controllers for the element in a serverUrl hash and attach to .data
             // later, once we have the actual element.
             elementControllers[directive.name] = controllerInstance;
             if (!hasElementTranscludeDirective) {
@@ -8030,7 +8030,7 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
 
   function jsonpReq(url, done) {
     // we can't use jQuery/jqLite here because jQuery does crazy shit with script elements, e.g.:
-    // - fetches local scripts via XHR and evals them
+    // - fetches serverUrl scripts via XHR and evals them
     // - adds and immediately removes script elements from the document
     var script = rawDocument.createElement('script'),
         doneWrapper = function() {
@@ -10524,12 +10524,12 @@ function getterFn(path, options, fullExp) {
  *   var getter = $parse('user.name');
  *   var setter = getter.assign;
  *   var context = {user:{name:'angular'}};
- *   var locals = {user:{name:'local'}};
+ *   var locals = {user:{name:'serverUrl'}};
  *
  *   expect(getter(context)).toEqual('angular');
  *   setter(context, 'newValue');
  *   expect(context.user.name).toEqual('newValue');
- *   expect(getter(context, locals)).toEqual('local');
+ *   expect(getter(context, locals)).toEqual('serverUrl');
  * </pre>
  *
  *
@@ -10538,7 +10538,7 @@ function getterFn(path, options, fullExp) {
  *
  *    * `context` – `{object}` – an object against which any expressions embedded in the strings
  *      are evaluated against (typically a scope object).
- *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+ *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
  *      `context`.
  *
  *    The returned function also has the following properties:
@@ -13156,7 +13156,7 @@ function $SceProvider() {
      *
      *    * `context` – `{object}` – an object against which any expressions embedded in the strings
      *      are evaluated against (typically a scope object).
-     *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+     *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
      *      `context`.
      */
     sce.parseAs = function sceParseAs(type, expr) {
@@ -13352,7 +13352,7 @@ function $SceProvider() {
      *
      *    * `context` – `{object}` – an object against which any expressions embedded in the strings
      *      are evaluated against (typically a scope object).
-     *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+     *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
      *      `context`.
      */
 
@@ -13370,7 +13370,7 @@ function $SceProvider() {
      *
      *    * `context` – `{object}` – an object against which any expressions embedded in the strings
      *      are evaluated against (typically a scope object).
-     *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+     *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
      *      `context`.
      */
 
@@ -13388,7 +13388,7 @@ function $SceProvider() {
      *
      *    * `context` – `{object}` – an object against which any expressions embedded in the strings
      *      are evaluated against (typically a scope object).
-     *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+     *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
      *      `context`.
      */
 
@@ -13406,7 +13406,7 @@ function $SceProvider() {
      *
      *    * `context` – `{object}` – an object against which any expressions embedded in the strings
      *      are evaluated against (typically a scope object).
-     *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+     *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
      *      `context`.
      */
 
@@ -13424,7 +13424,7 @@ function $SceProvider() {
      *
      *    * `context` – `{object}` – an object against which any expressions embedded in the strings
      *      are evaluated against (typically a scope object).
-     *    * `locals` – `{object=}` – local variables context object, useful for overriding values in
+     *    * `locals` – `{object=}` – serverUrl variables context object, useful for overriding values in
      *      `context`.
      */
 
@@ -14420,7 +14420,7 @@ var DATE_FORMATS_SPLIT = /((?:[^yMdHhmsaZE']+)|(?:'(?:[^']|'')*')|(?:E+|y+|M+|d+
  * @param {(Date|number|string)} date Date to format either as Date object, milliseconds (string or
  *    number) or various ISO 8601 datetime string formats (e.g. yyyy-MM-ddTHH:mm:ss.SSSZ and its
  *    shorter versions like yyyy-MM-ddTHH:mmZ, yyyy-MM-dd or yyyyMMddTHHmmssZ). If no timezone is
- *    specified in the string input, the time is considered to be in the local timezone.
+ *    specified in the string input, the time is considered to be in the serverUrl timezone.
  * @param {string=} format Formatting rules (see Description). If not specified,
  *    `mediumDate` is used.
  * @returns {string} Formatted string or the input if input is not recognized as date/millis.
@@ -18884,7 +18884,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', function($locale, $interp
  * instance gets its own scope, where the given loop variable is set to the current collection item,
  * and `$index` is set to the item index or key.
  *
- * Special properties are exposed on the local scope of each template instance, including:
+ * Special properties are exposed on the serverUrl scope of each template instance, including:
  *
  * | Variable  | Type            | Details                                                                     |
  * |-----------|-----------------|-----------------------------------------------------------------------------|
@@ -19970,9 +19970,9 @@ var ngOptionsMinErr = minErr('ngOptions');
  * Where:
  *
  *   * `array` / `object`: an expression which evaluates to an array / object to iterate over.
- *   * `value`: local variable which will refer to each item in the `array` or each property value
+ *   * `value`: serverUrl variable which will refer to each item in the `array` or each property value
  *      of `object` during iteration.
- *   * `key`: local variable which will refer to a property name in `object` during iteration.
+ *   * `key`: serverUrl variable which will refer to a property name in `object` during iteration.
  *   * `label`: The result of this expression will be the label for `<option>` element. The
  *     `expression` will most likely refer to the `value` variable (e.g. `value.propertyName`).
  *   * `select`: The result of this expression will be bound to the model of the parent `<select>`

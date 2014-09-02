@@ -61,8 +61,11 @@
     <Content Include=".idea\food.iml" />
     <Content Include=".jshintrc" />
     <Content Include="AddTemplates\AddParent.html" />
+    <Content Include="AddTemplates\fileLoad.html" />
+    <Content Include="AddTemplates\fileLoad.js" />
     <Content Include="AddTemplates\photo.js" />
     <Content Include="app.yaml" />
+    <Content Include="cat.jpg" />
     <Content Include="cordova.js" />
     <Content Include="cordova_plugins.js" />
     <Content Include="engineapp\app.yaml" />

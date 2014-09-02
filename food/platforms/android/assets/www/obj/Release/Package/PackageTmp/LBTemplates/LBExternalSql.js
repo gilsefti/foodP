@@ -7,7 +7,7 @@ lbExternalSql.config(function ($httpProvider) {
 lbExternalSql.service('LBDishes', function ($http) {
     this.getDishes = function (loc) {
         var dishes = {};
-        var commandUrl = local + "api/LunchBox/Dishes" ;
+        var commandUrl = serverUrl + "api/LunchBox/Dishes" ;
         var promise = $http({
             method: 'GET',
             url: commandUrl

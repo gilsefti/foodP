@@ -1,5 +1,5 @@
 //var local = 'http://localhost:58547/';
-var local = 'http://192.168.1.132:58547/';
+var serverUrl = 'http://192.168.1.132:58547/';
 
 
 var externalServices = angular.module('externalServices', []);
@@ -13,7 +13,7 @@ externalServices.service('locations', function ($http) {
         var locations = {};
         var promise = $http({
             method: 'GET',
-            url: local + "api/Location/Places"
+            url: serverUrl + "api/Location/Places"
         });
         return promise;
     };
@@ -21,7 +21,7 @@ externalServices.service('locations', function ($http) {
         var promise = $http({
             method: 'POST',
             data: loc,
-            url: local + "api/Location/AddPlace"
+            url: serverUrl + "api/Location/AddPlace"
         }).then(function (d) {
             return d.data;
         })
@@ -32,7 +32,7 @@ externalServices.service('locations', function ($http) {
 externalServices.service('dishes', function ($http) {
     this.getDishes = function (loc) {
         var dishes = {};
-        var commandUrl = local + "api/Dish/Dishes/" + loc.ID;
+        var commandUrl = serverUrl + "api/Dish/Dishes/" + loc.ID;
         var promise = $http({
             method: 'GET',
             url: commandUrl
@@ -48,7 +48,7 @@ externalServices.service('dishes', function ($http) {
         var promise = $http({
             method: 'POST',
             data: dish,
-            url: local + "api/Dish/AddDish"
+            url: serverUrl + "api/Dish/AddDish"
         }).then(function (d) {
             return d.data;
         })
@@ -58,7 +58,7 @@ externalServices.service('dishes', function ($http) {
 externalServices.service('lunchBox', function ($http) {
     this.addToLB = function (dis, userID) {
         dat = {dish:dis, usr:userID}
-        var commandUrl = local + "api/Dish/AddLB";
+        var commandUrl = serverUrl + "api/Dish/AddLB";
         var promise = $http({
             method: 'POST',
             url: commandUrl,

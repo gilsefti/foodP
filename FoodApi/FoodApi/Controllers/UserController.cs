@@ -19,6 +19,7 @@ namespace FoodApi.Controllers
                 var foodDb = new FoodBl.foodEntities();
                 var users = foodDb.Users;
 
+
                 var query = from usr in users
                             where usr.UserName == user.UserName
                             && usr.Password == user.Password

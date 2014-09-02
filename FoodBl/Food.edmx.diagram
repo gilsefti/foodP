@@ -8,8 +8,8 @@
         <EntityTypeShape EntityType="foodModel.Dish" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="foodModel.LunchBox" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="foodModel.Place" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="foodModel.sysdiagram" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="foodModel.User" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="foodModel.Img" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

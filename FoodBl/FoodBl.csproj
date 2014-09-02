@@ -66,6 +66,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Food.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Img.cs">
+      <DependentUpon>Food.tt</DependentUpon>
+    </Compile>
     <Compile Include="LunchBox.cs">
       <DependentUpon>Food.tt</DependentUpon>
     </Compile>
@@ -77,9 +80,6 @@
       <DependentUpon>Food.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Food.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>Food.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
