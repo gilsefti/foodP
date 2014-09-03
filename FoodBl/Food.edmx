@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DishId" Type="int" />
           <Property Name="FileStreem" Type="varbinary(max)" />
         </EntityType>
@@ -171,7 +171,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DishId" Type="Int32" />
           <Property Name="FileStreem" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>

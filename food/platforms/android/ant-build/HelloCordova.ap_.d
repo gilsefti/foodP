@@ -40,6 +40,7 @@ C:\foodAppP\food\platforms\android\assets\www\plugins \
 C:\foodAppP\food\platforms\android\assets\www\Properties \
 C:\foodAppP\food\platforms\android\assets\www\test.html \
 C:\foodAppP\food\platforms\android\assets\www\test.js \
+C:\foodAppP\food\platforms\android\assets\www\TestFile.html \
 C:\foodAppP\food\platforms\android\assets\www\ts.html \
 C:\foodAppP\food\platforms\android\assets\www\Web.config \
 C:\foodAppP\food\platforms\android\assets\www\Web.Debug.config \
@@ -68,6 +69,8 @@ C:\foodAppP\food\platforms\android\assets\www\bin\FoodBl.pdb \
 C:\foodAppP\food\platforms\android\assets\www\bin\FoodUi.dll \
 C:\foodAppP\food\platforms\android\assets\www\bin\FoodUi.dll.config \
 C:\foodAppP\food\platforms\android\assets\www\bin\FoodUi.pdb \
+C:\foodAppP\food\platforms\android\assets\www\bin\ImageResizer.dll \
+C:\foodAppP\food\platforms\android\assets\www\bin\ImageResizer.xml \
 C:\foodAppP\food\platforms\android\assets\www\bin\Newtonsoft.Json.dll \
 C:\foodAppP\food\platforms\android\assets\www\bin\Newtonsoft.Json.xml \
 C:\foodAppP\food\platforms\android\assets\www\bin\System.Net.Http.Formatting.dll \
@@ -222,6 +225,7 @@ C:\foodAppP\food\platforms\android\assets\www\packages\Antlr.3.4.1.9004 \
 C:\foodAppP\food\platforms\android\assets\www\packages\bootstrap.3.0.0 \
 C:\foodAppP\food\platforms\android\assets\www\packages\EntityFramework.6.0.0 \
 C:\foodAppP\food\platforms\android\assets\www\packages\EntityFramework.6.1.1 \
+C:\foodAppP\food\platforms\android\assets\www\packages\ImageResizer.3.4.3 \
 C:\foodAppP\food\platforms\android\assets\www\packages\jQuery.1.10.2 \
 C:\foodAppP\food\platforms\android\assets\www\packages\Microsoft.AspNet.Cors.5.2.0 \
 C:\foodAppP\food\platforms\android\assets\www\packages\Microsoft.AspNet.Mvc.5.0.0 \
@@ -307,6 +311,10 @@ C:\foodAppP\food\platforms\android\assets\www\packages\EntityFramework.6.1.1\too
 C:\foodAppP\food\platforms\android\assets\www\packages\EntityFramework.6.1.1\tools\init.ps1 \
 C:\foodAppP\food\platforms\android\assets\www\packages\EntityFramework.6.1.1\tools\install.ps1 \
 C:\foodAppP\food\platforms\android\assets\www\packages\EntityFramework.6.1.1\tools\migrate.exe \
+C:\foodAppP\food\platforms\android\assets\www\packages\ImageResizer.3.4.3\ImageResizer.3.4.3.nupkg \
+C:\foodAppP\food\platforms\android\assets\www\packages\ImageResizer.3.4.3\lib \
+C:\foodAppP\food\platforms\android\assets\www\packages\ImageResizer.3.4.3\lib\ImageResizer.dll \
+C:\foodAppP\food\platforms\android\assets\www\packages\ImageResizer.3.4.3\lib\ImageResizer.XML \
 C:\foodAppP\food\platforms\android\assets\www\packages\jQuery.1.10.2\Content \
 C:\foodAppP\food\platforms\android\assets\www\packages\jQuery.1.10.2\jQuery.1.10.2.nupkg \
 C:\foodAppP\food\platforms\android\assets\www\packages\jQuery.1.10.2\Tools \

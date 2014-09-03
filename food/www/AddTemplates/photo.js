@@ -1,12 +1,11 @@
-newDishControllers.service('fileUpload', ['$http', function ($http) {
+newDishControllers.service('fileUpload', function ($http, dataService) {
     this.uploadFileToUrl = function (ImageURI) {
         var options = new FileUploadOptions();
         options.fileKey = "recFile";
         options.fileName = ImageURI.substr(ImageURI.lastIndexOf('/') + 1);
         options.mimeType = "image/jpeg";
         var params = new Object();
-        params.value1 = "test";
-        params.value2 = "param";
+        params.dishId= dataService.dishModel.ID;
         options.params = params;
         options.chunkedMode = false;
         options.httpMethod = "POST";
@@ -22,17 +21,11 @@ newDishControllers.service('fileUpload', ['$http', function ($http) {
     function fail(r) {
 
     }
-}]);
+});
 
 newDishControllers.config(['$compileProvider',
-    function ($compileProvider) {
-        //var currentImgSrcSanitizationWhitelist = $compileProvider.imgSrcSanitizationWhitelist();
-        //var newImgSrcSanitizationWhiteList = currentImgSrcSanitizationWhitelist.toString().slice(0, -1)
-        //+ '|blob:http'
-        //+ currentImgSrcSanitizationWhitelist.toString().slice(-1);
-        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);
-        //console.log("Changing imgSrcSanitizationWhiteList from " + currentImgSrcSanitizationWhitelist + " to " + newImgSrcSanitizationWhiteList);
-        //$compileProvider.imgSrcSanitizationWhitelist(newImgSrcSanitizationWhiteList);
+    function ($compileProvider) {     
+        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob):|data:image\//);       
     }
 ]);
 newDishControllers.controller("photoCtrl", function ($scope, $state, fileUpload) {

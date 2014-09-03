@@ -61,3 +61,5 @@ C:\foodAppP\food\www\obj\Debug\FoodUi.pdb
 C:\foodAppP\food\www\bin\System.Web.Http.Cors.dll
 C:\foodAppP\food\www\bin\System.Web.Cors.dll
 C:\foodAppP\food\www\bin\System.Web.Http.Cors.xml
+C:\foodAppP\food\www\bin\ImageResizer.dll
+C:\foodAppP\food\www\bin\ImageResizer.xml

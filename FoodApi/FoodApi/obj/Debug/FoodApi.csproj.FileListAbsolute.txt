@@ -114,3 +114,5 @@ C:\foodAppP\FoodApi\FoodApi\bin\System.Web.WebPages.xml
 C:\foodAppP\FoodApi\FoodApi\bin\System.Web.WebPages.Deployment.xml
 C:\foodAppP\FoodApi\FoodApi\bin\System.Web.WebPages.Razor.xml
 C:\foodAppP\FoodApi\FoodApi\bin\Antlr3.Runtime.pdb
+C:\foodAppP\FoodApi\FoodApi\bin\ImageResizer.dll
+C:\foodAppP\FoodApi\FoodApi\bin\ImageResizer.xml

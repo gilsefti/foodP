@@ -11,7 +11,7 @@ newDishControllers.controller("dishCtrl", function ($scope, $state, dishes,dataS
     };
     $scope.getDish = function (dish) {
         dataService.dishModel = dish;
-        $state.go("addLB");
+        $state.go("new.photo");
     };
 });
 
@@ -25,7 +25,7 @@ newDishControllers.controller('newDishCtrl', function ($scope, $state, dishes,da
         dataService.dishModel.PlaceID = dataService.ID;
         dishes.addDish($scope.dishModel).then(function (dish) {
             $scope.dishModel = dish;
-            $state.go("addLB");
+            $state.go("new.photo");
             //window.location.href("lunchBox.html");
         });
     }

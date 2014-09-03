@@ -36,11 +36,7 @@ externalServices.service('dishes', function ($http) {
         var promise = $http({
             method: 'GET',
             url: commandUrl
-        }).then(function (d) {
-            return d.data;
-        }, function (ex) {
-
-        })
+        });
         return promise;
     }
 

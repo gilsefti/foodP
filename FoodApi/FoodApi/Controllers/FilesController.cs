@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ImageResizer;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -11,52 +13,107 @@ namespace FoodApi.Controllers
 {
     public class FilesController : ApiController
     {
-         [ActionName("SaveFile")]
-        public Task<HttpResponseMessage> PostSaveFile()
-        {
-            HttpRequestMessage request = this.Request;
-            if (!request.Content.IsMimeMultipartContent())
-            {
-                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
-            }
+   
 
-            //string root = System.Web.HttpContext.Current.Server.MapPath("~/App_Data/uploads");
-            var provider = new MultipartFormDataStreamProvider("c:");
+         [ActionName("Save")]
+          public async Task<HttpResponseMessage> PostSave()
+          {
+              if (!Request.Content.IsMimeMultipartContent())
+              {
+                  return Request.CreateResponse(HttpStatusCode.UnsupportedMediaType, "Unsupported media type.");
+              }
 
-            var task = request.Content.ReadAsMultipartAsync(provider);
-             //.ContinueWith<HttpResponseMessage>(o =>
-             //   {
+              // Read the file and form data.
+              MultipartFormDataMemoryStreamProvider provider = new MultipartFormDataMemoryStreamProvider();
+              await Request.Content.ReadAsMultipartAsync(provider);
 
-             //       string file1 = provider.BodyPartFileNames.First().Value;
-             //       // this is the file name on the server where the file was saved 
+              // Extract the fields from the form data.
+              string dishIdStr = provider.FormData["dishId"];
+              int dishId = Convert.ToInt32(dishIdStr);
+             
 
-             //       return new HttpResponseMessage()
-             //       {
-             //           Content = new StringContent("File uploaded.")
-             //       };
-             //   }
-            //);
-            return null;
-        }
+              // Check if files are on the request.
+              if (!provider.FileStreams.Any())
+              {
+                  return Request.CreateResponse(HttpStatusCode.BadRequest, "No file uploaded.");
+              }
 
-          [ActionName("Save")]
-         public string PostSave(int id)
-         {
-             HttpPostedFile File = HttpContext.Current.Request.Files["recFile"];
-             if (File == null)
-                 return null;
-             Byte[] imgByte = null;
-              imgByte = new Byte[File.ContentLength];
-             //force the control to load data in array
-             File.InputStream.Read(imgByte, 0, File.ContentLength);
-             var foodDb = new FoodBl.foodEntities();
-             FoodBl.Img img = new FoodBl.Img();
-             img.FileStreem = imgByte;
-             img.DishId = id;            
-             foodDb.Imgs.Add(img);
-             foodDb.SaveChanges();
-             return "";
-             //return Utils.UploadToServer(file);
-         }
+              IList<string> uploadedFiles = new List<string>();
+              foreach (KeyValuePair<string, Stream> file in provider.FileStreams)
+              {
+                  string fileName = file.Key;
+                  Stream stream = file.Value;
+
+                  //Stream stThumbSource = new MemoryStream(await item.ReadAsByteArrayAsync());
+
+                  MemoryStream stOut = new MemoryStream();
+                  var settings = new ResizeSettings
+                  {
+                      MaxWidth = 60,
+                      MaxHeight = 60,
+                      //Format = "jpg",
+                      Mode = FitMode.Max
+                  };
+                  ImageBuilder.Current.Build(stream, stOut, settings);
+                  //Byte[] imgByte = null;
+                  // imgByte = new Byte[stOut.Length];
+                  var imgByte = stOut.ToArray();
+                  //force the control to load data in array
+                  stOut.Read(imgByte, 0, (int)stOut.Length);
+
+
+                  var foodDb = new FoodBl.foodEntities();
+                  FoodBl.Img img = new FoodBl.Img();
+                  img.FileStreem = imgByte;
+                  //img.DishId = ID;
+                  img.DishId = dishId;           
+                  foodDb.Imgs.Add(img);
+                  foodDb.SaveChanges();
+              }
+
+              return Request.CreateResponse(HttpStatusCode.OK, "Successfully Uploaded: " + string.Join(", ", uploadedFiles));
+          }
+
+        
+         [ActionName("FileIds")]
+          public List<int> GetFileIds()
+          {
+              var foodDb = new FoodBl.foodEntities();
+              var data = from i in foodDb.Imgs
+                         select i.ID;
+              return data.ToList();
+          }
+
+          [ActionName("File")]
+          public HttpResponseMessage GetFile(int ID)
+          {
+              var foodDb = new FoodBl.foodEntities();
+              var data = from i in foodDb.Imgs
+                         where i.ID == ID
+                         select i;
+              FoodBl.Img img = (FoodBl.Img)data.SingleOrDefault();
+              byte[] imgData = img.FileStreem;
+              MemoryStream ms = new MemoryStream(imgData);
+              HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+              response.Content = new StreamContent(ms);
+              response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+              return response;
+          }
+
+          [ActionName("File")]
+          public HttpResponseMessage GetDishFiles(int ID)
+          {
+              var foodDb = new FoodBl.foodEntities();
+              var data = from i in foodDb.Imgs
+                         where i.DishId == ID
+                         select i;
+              FoodBl.Img img = (FoodBl.Img)data.SingleOrDefault();
+              byte[] imgData = img.FileStreem;
+              MemoryStream ms = new MemoryStream(imgData);
+              HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+              response.Content = new StreamContent(ms);
+              response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+              return response;
+          }   
     }
 }

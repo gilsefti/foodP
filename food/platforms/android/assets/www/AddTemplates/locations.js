@@ -15,7 +15,7 @@ newDishControllers.controller('locationsCtrl', function ($scope, $state, locatio
     }
     $scope.selectLocal = function (loc) {
         dataService.locModel = loc;
-        $state.go("dish");
+        $state.go("new.dish");
     };
 });
 
@@ -27,7 +27,7 @@ newDishControllers.controller('newLocationCtrl', function ($scope, $state, locat
     $scope.addLocation = function () {       
         locations.addLocation($scope.locModel).then(function (loc) {
             dataService.locModel = loc;
-            $state.go("dish");
+            $state.go("new.dish");
         });
     }
 });

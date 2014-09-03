@@ -1045,7 +1045,7 @@ androidExec.processMessages = function(messages) {
         if (messagesFromNative.length > 1) {
             return;
         }
-        while (messagesFromNative.length) {
+        //while (messagesFromNative.length) {
             // Don't unshift until the end so that reentrancy can be detected.
             messages = messagesFromNative[0];
             // The Java side can send a * message to indicate that it

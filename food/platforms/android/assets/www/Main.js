@@ -68,8 +68,8 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
               controller: 'fileLoadCtrl'
           });
 
-    //$urlRouterProvider.otherwise('/Login');
-    $urlRouterProvider.otherwise('/new/photo');
+    $urlRouterProvider.otherwise('/Login');
+    //$urlRouterProvider.otherwise('/new/photo');
     //$urlRouterProvider.otherwise('/new/fileLoad');
 
 });
