@@ -1,5 +1,7 @@
 ﻿<div class="panel panel-default">    
     <div class="list-group">
-        <a ng-repeat="plate in LBPlates" ng-click="selectLocal(plate)" class="list-group-item" href="" >{{plate.Name}}</a>
+        <a ng-repeat="plate in LBPlates" ng-click="selectLocal(plate)" class="list-group-item" href="" >{{plate.Name}}
+            <img ng-src="{{plate.imgLink}}" style="float:right" /> 
+        </a>
      </div>
 </div>

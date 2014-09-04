@@ -100,7 +100,7 @@ namespace FoodApi.Controllers
               return response;
           }
 
-          [ActionName("File")]
+          [ActionName("DishFiles")]
           public HttpResponseMessage GetDishFiles(int ID)
           {
               var foodDb = new FoodBl.foodEntities();
