@@ -5,7 +5,7 @@ mainApp.controller('mainCtrl', function ($scope) {
     $scope.tabs = [
             { link: 'LB', label: 'Lunch Box' },
             { link: 'Search', label: 'Search' },
-                 { link: 'new.location', label: 'Add Dish' },
+                 { link: 'new.location', label: 'Add to LB' },
     ];
 
     $scope.selectedTab = $scope.tabs[0];
@@ -59,11 +59,11 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
              url: '/newDish',
              templateUrl: 'AddTemplates/newDish.html',
              controller: 'newDishCtrl'
-        //  })
-        //.state('new.addLB', {
-        //     url: '/addLB',
-        //     templateUrl: 'AddTemplates/addLB.html',
-        //     controller: 'addLBCtrl'
+          })
+        .state('new.addLB', {
+             url: '/addLB',
+             templateUrl: 'AddTemplates/addLB.html',
+             controller: 'addLBCtrl'
           }).state('new.fileLoad', {
               url: '/fileLoad',
               templateUrl: 'AddTemplates/fileLoad.html',

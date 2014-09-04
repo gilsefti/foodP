@@ -61,6 +61,7 @@
     <Content Include=".idea\food.iml" />
     <Content Include=".jshintrc" />
     <Content Include="AddTemplates\AddParent.html" />
+    <Content Include="AddTemplates\addLB.js" />
     <Content Include="AddTemplates\newDish.js" />
     <Content Include="AddTemplates\fileLoad.html" />
     <Content Include="AddTemplates\fileLoad.js" />

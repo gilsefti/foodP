@@ -46,11 +46,12 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
              url: '/newLocation',
              templateUrl: "AddTemplates/newLocation.html",
              controller: "newLocationCtrl"
-          }).state("new.dish", {
+          })
+        .state("new.dish", {
              url: '/dish',
              templateUrl: "AddTemplates/dishes.html",
              controller: "dishCtrl"
-          }).state('new.photo', {
+          }).state('photo', {
              url: '/photo',
              templateUrl: 'AddTemplates/photo.html',
              controller: 'photoCtrl'
@@ -58,10 +59,11 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
              url: '/newDish',
              templateUrl: 'AddTemplates/newDish.html',
              controller: 'newDishCtrl'
-          }).state('new.addLB', {
-             url: '/addLB',
-             templateUrl: 'AddTemplates/addLB.html',
-             controller: 'addLBCtrl'
+        //  })
+        //.state('new.addLB', {
+        //     url: '/addLB',
+        //     templateUrl: 'AddTemplates/addLB.html',
+        //     controller: 'addLBCtrl'
           }).state('new.fileLoad', {
               url: '/fileLoad',
               templateUrl: 'AddTemplates/fileLoad.html',

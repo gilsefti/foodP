@@ -5,11 +5,11 @@ newDishControllers.controller('newDishCtrl', function ($scope, $state, dishes,da
     $scope.props.Title = "What is the name of the dish?";
 
     $scope.addDish = function () {
-        dataService.dishModel.PlaceID = dataService.ID;
+        $scope.dishModel.PlaceID = dataService.locModel.ID;
         dishes.addDish($scope.dishModel).then(function (dish) {
-            $scope.dishModel = dish;
-            $state.go("photo");
-            //window.location.href("lunchBox.html");
+            dataService.dishModel = dish;
+            //$state.go("photo");
+            $state.go("new.addLB");
         });
     }
 

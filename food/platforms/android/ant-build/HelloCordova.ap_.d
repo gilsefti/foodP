@@ -54,6 +54,8 @@ C:\foodAppP\food\platforms\android\assets\www\AddTemplates\fileLoad.js \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\locations.html \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\locations.js \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\newDish.html \
+C:\foodAppP\food\platforms\android\assets\www\AddTemplates\newDish.js \
+C:\foodAppP\food\platforms\android\assets\www\AddTemplates\newLoacation.js \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\newLocation.html \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\photo.html \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates\photo.js \

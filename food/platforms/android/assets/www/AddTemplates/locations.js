@@ -11,7 +11,7 @@ newDishControllers.controller('locationsCtrl', function ($scope, $state, locatio
         alert(error);    // Where the error is actually caught.
     });
     $scope.addLocation = function () {
-        $state.go("newLocation");     
+        $state.go("new.newLocation");     
     }
     $scope.selectLocal = function (loc) {
         dataService.locModel = loc;
@@ -19,23 +19,11 @@ newDishControllers.controller('locationsCtrl', function ($scope, $state, locatio
     };
 });
 
-newDishControllers.controller('newLocationCtrl', function ($scope, $state, locations,dataService) {
-    $scope.locModel = {};
 
-    $scope.props.Title = "Add a new location";
-    
-    $scope.addLocation = function () {       
-        locations.addLocation($scope.locModel).then(function (loc) {
-            dataService.locModel = loc;
-            $state.go("new.dish");
-        });
-    }
-});
-
-newDishControllers.controller("photoCtrl", function ($scope, $state, dishes) {
-    $scope.props.Title = "Add a photo";
-    $scope.loadPhoto = function () {
-        $state.go("favorites");
-    };
-});
+//newDishControllers.controller("photoCtrl", function ($scope, $state, dishes) {
+//    $scope.props.Title = "Add a photo";
+//    $scope.loadPhoto = function () {
+//        $state.go("favorites");
+//    };
+//});
 
