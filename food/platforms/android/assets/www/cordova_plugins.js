@@ -187,6 +187,13 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.facebookconnect/www/phonegap/plugin/facebookConnectPlugin/facebookConnectPlugin.js",
+        "id": "com.phonegap.plugins.facebookconnect.FacebookConnectPlugin",
+        "clobbers": [
+            "window.facebookConnectPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -194,7 +201,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.camera": "0.3.2-dev",
     "org.apache.cordova.file": "1.3.0",
-    "org.apache.cordova.file-transfer": "0.4.5"
+    "org.apache.cordova.file-transfer": "0.4.5",
+    "com.phonegap.plugins.facebookconnect": "0.7.1"
 }
 // BOTTOM OF METADATA
 });

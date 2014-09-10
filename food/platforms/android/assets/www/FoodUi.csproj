@@ -61,6 +61,7 @@
     <Content Include=".idea\food.iml" />
     <Content Include=".jshintrc" />
     <Content Include="AddTemplates\AddParent.html" />
+    <Content Include="AddTemplates\addLB.js" />
     <Content Include="AddTemplates\newDish.js" />
     <Content Include="AddTemplates\fileLoad.html" />
     <Content Include="AddTemplates\fileLoad.js" />
@@ -76,9 +77,13 @@
     <Content Include="indexphot.html" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular.js" />
+    <Content Include="js\facebookConnectPlugin.js" />
     <Content Include="LBTemplates\LBExternalSql.js" />
+    <Content Include="LBTemplates\FBLogin.html" />
+    <Content Include="LBTemplates\FBLogin.js" />
     <Content Include="LBTemplates\Login.html" />
     <Content Include="LBTemplates\Login.js" />
+    <Content Include="LBTemplates\loginServices.js" />
     <Content Include="LBTemplates\LunchBox.js" />
     <Content Include="LBTemplates\Search.html" />
     <Content Include="LBTemplates\LunchBox.html" />
@@ -127,8 +132,11 @@
     <Content Include="AddTemplates\newDish.html" />
     <Content Include="AddTemplates\newLocation.html" />
     <Content Include="AddTemplates\photo.html" />
+    <Content Include="test1.js" />
+    <Content Include="indexFB.html" />
     <Content Include="test.html" />
     <Content Include="test.js" />
+    <Content Include="TestFB.html" />
     <Content Include="TestFile.html" />
     <Content Include="ts.html" />
     <Content Include="Web.config" />

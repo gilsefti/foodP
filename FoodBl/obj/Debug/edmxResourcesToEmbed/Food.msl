@@ -55,6 +55,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="foodModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="FacebookID" ColumnName="FacebookID" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="ID" ColumnName="ID" />

@@ -13,7 +13,7 @@ namespace FoodApi.Controllers
         [ActionName("Val")]
         public string GetVal()
         {
-            return "value";
+            return "value1111";
         }
 
         [ActionName("Places")]

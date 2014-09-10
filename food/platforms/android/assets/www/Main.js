@@ -5,7 +5,7 @@ mainApp.controller('mainCtrl', function ($scope) {
     $scope.tabs = [
             { link: 'LB', label: 'Lunch Box' },
             { link: 'Search', label: 'Search' },
-                 { link: 'new.location', label: 'Add Dish' },
+                 { link: 'new.location', label: 'Add to LB' },
     ];
 
     $scope.selectedTab = $scope.tabs[0];
@@ -33,7 +33,8 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.
         state('LB', { url: '/LB', templateUrl: 'LBTemplates/LunchBox.html', controller: "lunchBoxCtrl" }).
         state('Search', { url: '/Search', templateUrl: 'LBTemplates/Search.html', controller: "searchCtrl" }).
-        state('Login', { url: '/Login', templateUrl: 'LBTemplates/Login.html', controller: "loginCtrl" }).
+        //state('Login', { url: '/Login', templateUrl: 'LBTemplates/Login.html', controller: "loginCtrl" }).
+               state('FBLogin', { url: '/FBLogin', templateUrl: 'LBTemplates/FBLogin.html', controller: "FBLoginCtrl" }).
           state('new', {
               url: '/new',
               templateUrl: 'AddTemplates/AddParent.html',
@@ -59,20 +60,20 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
              url: '/newDish',
              templateUrl: 'AddTemplates/newDish.html',
              controller: 'newDishCtrl'
-        //  })
-        //.state('new.addLB', {
-        //     url: '/addLB',
-        //     templateUrl: 'AddTemplates/addLB.html',
-        //     controller: 'addLBCtrl'
+          })
+        .state('new.addLB', {
+             url: '/addLB',
+             templateUrl: 'AddTemplates/addLB.html',
+             controller: 'addLBCtrl'
           }).state('new.fileLoad', {
               url: '/fileLoad',
               templateUrl: 'AddTemplates/fileLoad.html',
               controller: 'fileLoadCtrl'
           });
 
-    $urlRouterProvider.otherwise('/Login');
+    //$urlRouterProvider.otherwise('/Login');
     //$urlRouterProvider.otherwise('/new/photo');
     //$urlRouterProvider.otherwise('/new/fileLoad');
-
+    $urlRouterProvider.otherwise('/FBLogin');
 });
 

@@ -1,7 +1,7 @@
 /**
  * Created by gilad on 7/9/2014.
  */
-var local = 'http://localhost:54864/';
+var local = 'http://localhost:58547/';
 
 var dish = angular.module("dish", []);
 dish.config(function ($httpProvider) {

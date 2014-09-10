@@ -1,4 +1,4 @@
-var loginServices = angular.module('loginServices', []);
+
 loginServices.controller('loginCtrl', function ($scope, login, UserService, $state) {
     $scope.login = function () {
        
@@ -22,13 +22,5 @@ loginServices.controller('loginCtrl', function ($scope, login, UserService, $sta
         });
 
     }
-});
-
-loginServices.service('UserService', function () {
-    this.user = {
-        isLogged: false,
-        username: '',
-        ID:''
-    };
 });
 

@@ -33,5 +33,28 @@ namespace FoodApi.Controllers
             }
 
         }
+
+        [ActionName("LogFB")]
+        public User GetLogFB(long id)
+        {
+            try
+            {
+                var foodDb = new FoodBl.foodEntities();
+                var users = foodDb.Users;
+
+
+                var query = from usr in users
+                            where usr.FacebookID == id
+                            select usr;
+                List<User> ls = query.ToList();
+                return ls[0];
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
+     
 }

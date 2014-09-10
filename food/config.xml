@@ -9,4 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+	<!-- If you're using PhoneGap Build -->
+
 </widget>

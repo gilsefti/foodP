@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+<div id="fb-root"></div>  
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +18,17 @@
     <!--<script src="js/angular-route.js"></script>-->
     <script src="js/angular-ui-router.js"></script>
     <script src="js/ExternalServicesSql.js"></script>
+   
 
     <script src="LBTemplates/LBExternalSql.js"></script>
-    <script src="LBTemplates/Login.js"></script>
-    <script src="dishServices.js"></script>
+    
+    <script src="js/facebookConnectPlugin.js"></script>
     <script src="Main.js"></script>
+    <script src="LBTemplates/loginServices.js"></script>
+    <script src="LBTemplates/Login.js"></script>
+    <script src="LBTemplates/FBlogin.js"></script>
+    <script src="dishServices.js"></script>
+ 
     <script src="LBTemplates/LunchBox.js"></script>
   
 
@@ -34,7 +41,8 @@
     
     <script src="AddTemplates/dishes.js"></script>
     <script src="AddTemplates/newDish.js"></script>
-    <script src="AddTemplates/photo.js"></script>
+    <script src="AddTemplates/addLB.js"></script>
+  <script src="AddTemplates/photo.js"></script>
     <script src="AddTemplates/fileLoad.js"></script>
   
     <!--    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>-->
@@ -43,6 +51,7 @@
 </head>
 
 <body ng-app="Main" ng-controller="mainCtrl">
+  
     <nav class="navbar navbar-default" role="navigation">
         <ul class="nav nav-tabs">
             <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">

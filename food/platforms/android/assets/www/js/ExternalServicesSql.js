@@ -58,7 +58,7 @@ externalServices.service('lunchBox', function ($http) {
         var promise = $http({
             method: 'POST',
             url: commandUrl,
-            data: dish
+            data: dat
         });
         return promise;
     }

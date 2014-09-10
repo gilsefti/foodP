@@ -17,4 +17,3 @@ C:\foodAppP\FoodBl\bin\Debug\EntityFramework.xml
 C:\foodAppP\FoodBl\bin\Debug\EntityFramework.SqlServer.xml
 C:\foodAppP\FoodBl\obj\Debug\FoodBl.dll
 C:\foodAppP\FoodBl\obj\Debug\FoodBl.pdb
-C:\foodAppP\FoodBl\obj\Debug\FoodBl.csprojResolveAssemblyReference.cache

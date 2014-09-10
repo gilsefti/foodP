@@ -16,10 +16,10 @@ newDishControllers.service('fileUpload', function ($http, dataService) {
         ft.upload(ImageURI, serverUrl + "api/Files/Save", win, fail, options);
     }
     function win(r) {
-
+        $state.go("new.addLB");
     }
     function fail(r) {
-
+        $state.go("new.addLB");
     }
 });
 
