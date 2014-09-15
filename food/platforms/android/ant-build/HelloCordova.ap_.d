@@ -292,7 +292,7 @@ C:\foodAppP\food\platforms\android\assets\www\js\ExternalServices.js \
 C:\foodAppP\food\platforms\android\assets\www\js\ExternalServicesSql.js \
 C:\foodAppP\food\platforms\android\assets\www\js\facebookConnectPlugin.js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\FBLogin.html \
-C:\foodAppP\food\platforms\android\assets\www\LBTemplates\FBlogin.js \
+C:\foodAppP\food\platforms\android\assets\www\LBTemplates\FBLogin.js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\LBExternalSql.js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\Login.html \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\Login.js \

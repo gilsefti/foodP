@@ -1,5 +1,5 @@
 //var local = 'http://localhost:58547/';
-var serverUrl = 'http://192.168.1.132:58547/';
+var serverUrl = 'http://gilad-PC:58547/';
 
 
 var externalServices = angular.module('externalServices', []);
@@ -59,6 +59,17 @@ externalServices.service('lunchBox', function ($http) {
             method: 'POST',
             url: commandUrl,
             data: dat
+        });
+        return promise;
+    }
+});
+
+externalServices.service('users', function ($http) {
+    this.logFB = function (FBID) {
+        var commandUrl = serverUrl + "api/User/LogFB/" + FBID;
+        var promise = $http({
+            method: 'GET',
+            url: commandUrl          
         });
         return promise;
     }

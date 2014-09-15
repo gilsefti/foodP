@@ -57,7 +57,7 @@ namespace FoodApi.Controllers
                 var foodDb = new FoodBl.foodEntities();
                 LunchBox lb = new LunchBox();
                 lb.DishId = dish.ID;
-                lb.UserID = 1;
+                lb.UserID = userId;
                 foodDb.LunchBoxes.Add(lb);
                 foodDb.SaveChanges();
             }

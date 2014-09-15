@@ -1,33 +1,24 @@
 /**
  * Created by gilad on 7/9/2014.
  */
-var local = 'http://localhost:54864/';
+var serverUrl = 'http://192.168.1.128:58547/';
 
-var dish = angular.module("dish", ["ngRoute"]);
-
-dish.controller('locationsCtrl',function($scope, $state){
-    $scope.x = "xxx";
-    $scope.nextCtrl = function(){
-        $state.go("newLocation");
-
-    }
-});
-dish.controller('mainCtrl', function ($scope) {
-
-
-});
-dish.controller('newLocationCtrl',function($scope, $state){
-  alert($scope.x);
+var dish = angular.module("dish", []);
+dish.config(function ($httpProvider) {
+    $httpProvider.defaults.headers.post["Content-Type"] = "application/json;charset=utf-8";
 });
 
-dish.config(function ($routeProvider) {
-        $routeProvider.when('/', {
-            controller: 'locationsCtrl',
-            template:" <button ng-click='nextCtrl()'>next Ctrl</button> "
-        }).when("/newLocation", {
-            controller: "newLocationCtrl",
-            template:"next Ctrl"
-        })
-    }
-);
-  
+dish.controller('mainCtrl', function ($scope, $http) {
+   $scope.getLocations = function () {
+        var locations = {};
+        $http({
+            method: 'GET',
+            url: serverUrl + "api/Location/Places"
+        }).then(function (d) {
+            alert(d.data);
+        }).catch(function (error) {
+            alert(error);    // Where the error is actually caught.
+        });;
+
+    };
+});

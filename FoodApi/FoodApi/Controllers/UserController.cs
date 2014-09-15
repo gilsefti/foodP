@@ -47,7 +47,10 @@ namespace FoodApi.Controllers
                             where usr.FacebookID == id
                             select usr;
                 List<User> ls = query.ToList();
-                return ls[0];
+                if (ls.Count == 0)
+                    return NewUser(id);
+                else
+                    return ls[0];
             }
             catch (Exception ex)
             {
@@ -55,6 +58,17 @@ namespace FoodApi.Controllers
             }
 
         }
+
+        private User NewUser(long facebookId)
+        {
+            var foodDb = new FoodBl.foodEntities();
+            var users = foodDb.Users;
+            User newUser = new FoodBl.User();
+            newUser.FacebookID = facebookId;
+            users.Add(newUser);
+            foodDb.SaveChanges();
+            return newUser;
+        }
     }
-     
+
 }

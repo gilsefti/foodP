@@ -10,7 +10,11 @@ mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
 
     var success = function (response) {
         if (response.status === 'connected') {
-            UserService.initUser();
+            var promiseA =  UserService.initUser();
+            promiseA.then(function () {
+                $state.go("LB");
+            }).catch(function (er)
+            { alert(er) });
         }
     }
     var fail = function (response) {
@@ -20,7 +24,8 @@ mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
     $scope.logout = function () {
         facebookConnectPlugin.logout(success, fail);
         var success = function (response) {
-            UserService.initUser();
+        
+         
         }
         var fail = function (response) { alert("logout failed") }
     }

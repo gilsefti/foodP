@@ -1,4 +1,4 @@
-newDishControllers.service('fileUpload', function ($http, dataService) {
+newDishControllers.service('fileUpload', function ($http, $state,dataService) {
     this.uploadFileToUrl = function (ImageURI) {
         var options = new FileUploadOptions();
         options.fileKey = "recFile";

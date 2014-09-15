@@ -3,7 +3,7 @@ mainApp.controller("lunchBoxCtrl", function ($scope, $state, LBDishes, UserServi
     //$scope.props.Title = "Select a dish";
     $scope.LBPlates = {};
     //dataService.dishModel = {};
-    LBDishes.getDishes(UserService.user.ID).then(function (d) {
+    LBDishes.getDishes(UserService.user().ID).then(function (d) {
         $scope.LBPlates = d;
         for (var i = 0; i < $scope.LBPlates.length; i++) {
             $scope.LBPlates[i].imgLink = serverUrl + "api/Files/DishFiles/" + $scope.LBPlates[i].ID;

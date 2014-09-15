@@ -6,7 +6,7 @@ newDishControllers.controller('addLBCtrl', function ($scope, $state, lunchBox, d
 
     $scope.addLB = function () {
  
-        lunchBox.addToLB(dataService.dishModel, UserService.user.ID).then(function () {
+        lunchBox.addToLB(dataService.dishModel, UserService.user().ID).then(function () {
             $state.go("Search");
             //window.location.href("lunchBox.html");
         });
