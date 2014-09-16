@@ -172,6 +172,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\FoodP.pubxml" />
     <None Include="Properties\PublishProfiles\Test.pubxml" />
   </ItemGroup>
   <PropertyGroup>

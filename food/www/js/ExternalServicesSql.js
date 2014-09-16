@@ -1,5 +1,5 @@
-//var local = 'http://localhost:58547/';
-var serverUrl = 'http://gilad-PC:58547/';
+
+
 
 
 var externalServices = angular.module('externalServices', []);
