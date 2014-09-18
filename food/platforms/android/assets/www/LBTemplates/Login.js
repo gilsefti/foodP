@@ -18,7 +18,7 @@ loginServices.controller('loginCtrl', function ($scope, login, UserService, $sta
             UserService.user().isLogged = false;
             UserService.user().username = '';
             UserService.user().ID = '';
-            throw ex;
+            alert( ex);
         });
 
     }

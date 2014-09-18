@@ -68,6 +68,7 @@
     <Content Include="AddTemplates\newLoacation.js" />
     <Content Include="AddTemplates\photo.js" />
     <Content Include="app.yaml" />
+    <Content Include="appconfig.js" />
     <Content Include="cat.jpg" />
     <Content Include="cordova.js" />
     <Content Include="cordova_plugins.js" />

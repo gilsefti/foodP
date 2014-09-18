@@ -4,22 +4,22 @@ mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
             var appId = "509210995889450";//prompt("Enter FB Application ID", "");
             facebookConnectPlugin.browserInit(appId);
         }
+        var success = function (response) {
+            if (response.status === 'connected') {
+                var promiseA = UserService.initUser();
+                promiseA.then(function () {
+                    $state.go("LB");
+                }).catch(function (er)
+                { alert(er) });
+            }
+        }
+        var fail = function (response) {
+            alert("login failed")
+        }
 
         facebookConnectPlugin.login([], success, fail);
     }
 
-    var success = function (response) {
-        if (response.status === 'connected') {
-            var promiseA =  UserService.initUser();
-            promiseA.then(function () {
-                $state.go("LB");
-            }).catch(function (er)
-            { alert(er) });
-        }
-    }
-    var fail = function (response) {
-        alert("login failed")
-    }
 
     $scope.logout = function () {
         facebookConnectPlugin.logout(success, fail);

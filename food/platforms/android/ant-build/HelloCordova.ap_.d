@@ -195,6 +195,7 @@ C:\foodAppP\food\platforms\android\assets\www \
 C:\foodAppP\food\platforms\android\assets\_where-is-www.txt \
 C:\foodAppP\food\platforms\android\assets\www\AddTemplates \
 C:\foodAppP\food\platforms\android\assets\www\app.yaml \
+C:\foodAppP\food\platforms\android\assets\www\appconfig.js \
 C:\foodAppP\food\platforms\android\assets\www\bin \
 C:\foodAppP\food\platforms\android\assets\www\cat.jpg \
 C:\foodAppP\food\platforms\android\assets\www\Connections.xml \
