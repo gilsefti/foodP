@@ -1,0 +1,40 @@
+cordova create food
+cd food
+
+cordova platform add android
+
+cordova plugin add org.apache.cordova.device
+cordova plugin add org.apache.cordova.file-transfer
+cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
+cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin  --variable APP_ID=509210995889450 --variable APP_NAME=Food share
+
+
+cd C:\foodAppP\food
+
+cordova build
+
+ripple emulate --path platforms/android/assets/www
+
+cordova run android --nobuild
+
+about:inspect
+
+
+from command prompt (as administrator):
+netsh http add urlacl url=http://gilad-PC:58547/ user=everyone
+
+netsh advfirewall firewall add rule name="IISExpressWeb" dir=in protocol=tcp localport=58547 profile=private remoteip=localsubnet action=allow
+
+jobs@eteachergroup.com
+
+
+netsh http add urlacl url=http://192.168.1.128:63803/ user=everyone
+
+
+keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | "c:\OpenSSL-Win64\bin\openssl.exe" sha1 -binary | "c:\OpenSSL-Win64\bin\openssl.exe" base64
+pass: (android) debug
+Bmce+9aHdOoVtE7fS3B07tfj7Bc=
+
+keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | "c:\OpenSSL-Win64\bin\openssl.exe" sha1 -binary | "c:\OpenSSL-Win64\bin\openssl.exe" base64
+
+keytool -exportcert -alias <RELEASE_KEY_ALIAS> -keystore <RELEASE_KEY_PATH> | "c:\OpenSSL-Win64\bin\openssl.exe" sha1 -binary | "c:\OpenSSL-Win64\bin\openssl.exe" base64

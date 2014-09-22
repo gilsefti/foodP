@@ -179,6 +179,7 @@ C:\foodAppP\food\platforms\android\FacebookLib\bin\res\drawable-xhdpi\com_facebo
 C:\foodAppP\food\platforms\android\FacebookLib\bin\res\drawable-xhdpi\com_facebook_tooltip_blue_topnub.png \
 C:\foodAppP\food\platforms\android\FacebookLib\bin\res\drawable-xhdpi\com_facebook_tooltip_blue_xout.png \
 C:\foodAppP\food\platforms\android\res\drawable\icon.png \
+C:\foodAppP\food\platforms\android\res\drawable\images.jpg \
 C:\foodAppP\food\platforms\android\res\drawable-hdpi\icon.png \
 C:\foodAppP\food\platforms\android\res\drawable-ldpi\icon.png \
 C:\foodAppP\food\platforms\android\res\drawable-mdpi\icon.png \

@@ -22,7 +22,7 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
-    <name>HelloCordova</name>
+    <name>Food share</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
