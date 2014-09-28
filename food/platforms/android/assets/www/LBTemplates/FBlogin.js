@@ -6,11 +6,7 @@ mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
         }
         var success = function (response) {
             if (response.status === 'connected') {
-                var promiseA = UserService.initUser();
-                promiseA.then(function () {
-                    $state.go("LB");
-                }).catch(function (er)
-                { alert(er) });
+                $state.go("LB");              
             }
         }
         var fail = function (response) {

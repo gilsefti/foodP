@@ -1,0 +1,12 @@
+﻿<div class="panel panel-default">
+    <div class="list-group">
+        <div class="row">
+
+            <a ng-repeat="plate in LBPlates" ng-click="selectLocal(plate)" class="list-group-item" href="">
+                <div class="col-xs-7"> {{plate.Name}}</div>
+                <div class="col-xs-5"> <img ng-src="{{plate.imgLink}}" /></div>
+                <div class="clearfix visible-xs-block"></div>
+            </a>
+        </div>
+    </div>
+</div>

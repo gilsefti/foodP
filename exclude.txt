@@ -1,0 +1,10 @@
+\bin\
+\obj\
+\packages\
+\Properties\
+FoodUi.csproj
+FoodUi.csproj.user
+FoodUi.sln
+FoodUi.v12.suo
+.config
+.jshintrc

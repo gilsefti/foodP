@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var serverUrl = 'http://192.168.1.132:58547/';
+            $('#btnUploadFile').on('click', function () {
+
+                var data = new FormData();
+
+                var files = $("#fileUpload").get(0).files;
+
+
+                // Add the uploaded image content to the form data collection
+                if (files.length > 0) {
+                    data.append("recFile", files[0]);
+                    data.append("dishId","1" );
+                }
+
+                // Make Ajax request with the contentType = false, and procesDate = false
+                var ajaxRequest = $.ajax({
+                    type: "POST",
+                    url: serverUrl + "api/Files/Save",
+                    contentType: false,
+                    processData: false,
+                    data: data
+                });
+
+                ajaxRequest.done(function (xhr, textStatus) {
+                    // Do other operation
+                });
+            });
+
+            $("#btnShow").click(function () {
+                $("#imgContainer").empty();
+                $("#imgContainer").append("<img src='" + serverUrl + "api/Files/File" + "' /> <br />");
+
+            });
+
+            $("#btnShow").click(function () {
+                var options = {};
+                options.url = serverUrl + "api/Files/FileIds";
+                options.type = "GET";
+                options.dataType = "json";
+                options.contentType = "application/json";
+                options.success = function (results) {
+                    $("#imgContainer").empty();
+                    for (var i = 0; i < results.length; i++) {
+                        $("#imgContainer").append("<img src='" + serverUrl + "api/Files/File/" + results[i] + "' /> <br />");
+                    }
+
+                };
+                options.error = function (err) { alert(err.statusText); };
+                $.ajax(options);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <div>
+            <label for="fileUpload">Select File to Upload:</label>
+            <input type="file" id="fileUpload" />
+            <br />
+            <input type="button" value="Upload File" id="btnUploadFile" />
+            <br />
+            <input type="button" id="btnShow" value="Show" />
+            <br />
+            <div id="imgContainer"></div>
+        </div>
+    </form>
+
+</body>
+</html>

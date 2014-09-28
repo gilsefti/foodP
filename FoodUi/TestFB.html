@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function myLogin() {
+            var appId = prompt("Enter FB Application ID", "");
+            //var appId = "509210995889450";//prompt("Enter FB Application ID", "");
+            facebookConnectPlugin.browserInit(appId);
+            facebookConnectPlugin.login([],
+               success, fail);
+            var success = function (response) {
+                if (response.status === 'connected')
+                { alert(JSON.stringify(response)) }
+            }
+            var fail = function (response) { alert("login failed") }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script src="js/facebookConnectPlugin.js"></script>
+    <button type="button" onclick="myLogin()">Click me </button>
+</body>
+</html>

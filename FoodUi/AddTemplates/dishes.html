@@ -1,0 +1,9 @@
+
+<div class="panel panel-default">
+    <button type="button" class="btn btn-primary btn-lg btn-block " ng-click="addDish()">
+      Add a new dish <span class="fa fa-plus-square"></span>
+    </button>
+    <div class="list-group">
+        <a ng-repeat="dish in dishes" ng-click="selectDish(dish)" class="list-group-item" href="">{{dish.Name}}</a>
+    </div>
+</div>
