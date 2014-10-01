@@ -71,9 +71,9 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
               controller: 'fileLoadCtrl'
           });
 
-    //$urlRouterProvider.otherwise('/Login');
-    //$urlRouterProvider.otherwise('/new/photo');
-    //$urlRouterProvider.otherwise('/new/fileLoad');
-    $urlRouterProvider.otherwise('/FBLogin');
+ 
+    //$urlRouterProvider.otherwise('/FBLogin');
+    $urlRouterProvider.otherwise('/Search');
+    //$urlRouterProvider.otherwise('/new/location');
 });
 

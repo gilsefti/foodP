@@ -1,14 +1,14 @@
 ﻿var loginServices = angular.module('loginServices', ["externalServices"]);
 
-loginServices.service('UserService', function (users,$q) {
-
+loginServices.service('UserService', function (users, $q) {
+    
     var userData = {
         isLogged: false,
         username: '',
         ID: '',
-        FBID:''
+        FBID: ''
     };
-   
+
     this.initUser = function () {
         var task = $q.defer();
         var success = function (response) {
@@ -27,12 +27,21 @@ loginServices.service('UserService', function (users,$q) {
             });
         }
 
-      
-        facebookConnectPlugin.api("me/", [],
-                  success,
-                   function (response) {
-                       task.reject();
-                   });
+        if (userData.ID == '')
+        {
+            if (initializeUser) {
+                var response = { id: 10152713949253828 }
+                success(response);
+            }
+            else
+            facebookConnectPlugin.api("me/", [],
+                      success,
+                       function (response) {
+                           task.reject();
+                       });
+        }
+        else
+            task.resolve();
         return task.promise;
     }
     this.user = function () {

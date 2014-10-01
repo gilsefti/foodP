@@ -11,7 +11,7 @@ namespace FoodApi.Controllers
     public class LunchBoxController : ApiController
     {
         [ActionName("Dishes")]
-        ///id parameter is  place Id
+        ///id parameter is  user Id
         public List<Dish> GetDishes(int id)
         {
             var foodDb = new FoodBl.foodEntities();

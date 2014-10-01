@@ -30,3 +30,16 @@ lbExternalSql.service('login', function ($http) {
         return promise;
     }
 })
+
+lbExternalSql.service('searchDishes',function($http){
+    this.searchDis = function (subStr) {
+        var dat = { 'subStr': subStr };
+        var commandUrl = serverUrl + "api/Dish/SearchDishes";
+        var promise = $http({
+            method: 'POST',
+            data:dat ,
+            url: commandUrl
+        });
+        return promise;
+    }
+});

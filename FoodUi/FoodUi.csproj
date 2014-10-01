@@ -74,13 +74,14 @@
     <Content Include="indexphot.html" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular.js" />
-    <Content Include="js\facebookConnectPlugin.js" />
+    <Content Include="facebookConnectPlugin.js" />
     <Content Include="LBTemplates\LBExternalSql.js" />
     <Content Include="LBTemplates\FBLogin.html" />
     <Content Include="LBTemplates\FBLogin.js" />
     <Content Include="LBTemplates\Login.html" />
     <Content Include="LBTemplates\Login.js" />
     <Content Include="LBTemplates\loginServices.js" />
+    <Content Include="LBTemplates\Search.js" />
     <Content Include="LBTemplates\LunchBox.js" />
     <Content Include="LBTemplates\Search.html" />
     <Content Include="LBTemplates\LunchBox.html" />

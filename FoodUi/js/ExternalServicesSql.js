@@ -9,10 +9,11 @@ externalServices.config(function ($httpProvider) {
 
 
 externalServices.service('locations', function ($http) {
-    this.getLocations = function () {
-        var locations = {};
+    this.getLocations = function (subStr) {
+        var dat = { 'subStr': subStr };
         var promise = $http({
-            method: 'GET',
+            method: 'POST',
+            data:dat,
             url: serverUrl + "api/Location/Places"
         });
         return promise;

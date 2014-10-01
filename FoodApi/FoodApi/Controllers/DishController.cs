@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace FoodApi.Controllers
 {
-   
+
     public class DishController : ApiController
     {
 
@@ -31,7 +31,7 @@ namespace FoodApi.Controllers
             }
         }
 
-      
+
 
         [ActionName("Dishes")]
         ///id parameter is  place Id
@@ -64,9 +64,31 @@ namespace FoodApi.Controllers
             catch (Exception ex)
             {
 
+
                 throw ex;
             }
         }
 
+        [ActionName("SearchDishes")]
+        public List<Dish> PostSearchDishes(JObject jsonData)
+        {
+            try
+            {
+                dynamic json = jsonData;            
+                string subStr = json.subStr;
+                var foodDb = new FoodBl.foodEntities();
+                var dishes = foodDb.Dishes;
+
+
+                var query = (from dish in dishes
+                            where dish.Name.StartsWith(subStr)
+                            select dish).Take(10);
+                List<Dish> ls = query.ToList();
+                return ls;
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
     }
 }
