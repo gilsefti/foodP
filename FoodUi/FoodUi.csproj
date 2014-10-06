@@ -81,6 +81,8 @@
     <Content Include="LBTemplates\Login.html" />
     <Content Include="LBTemplates\Login.js" />
     <Content Include="LBTemplates\loginServices.js" />
+    <Content Include="LBTemplates\ViewDish.html" />
+    <Content Include="LBTemplates\ViewDish.js" />
     <Content Include="LBTemplates\Search.js" />
     <Content Include="LBTemplates\LunchBox.js" />
     <Content Include="LBTemplates\Search.html" />
@@ -100,7 +102,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connections.xml" />
     <Content Include="css\lunch.css" />
     <Content Include="js\ExternalServices.js" />
     <Content Include="js\ExternalServicesSql.js" />
@@ -111,7 +112,7 @@
     <Content Include="mobile-angular-ui\fonts\fontawesome-webfont.svg" />
     <Content Include="mobile-angular-ui\js\mobile-angular-ui.js" />
     <Content Include="mobile-angular-ui\js\mobile-angular-ui.min.js" />
-    <Content Include="dishServices.js" />
+    <Content Include="js\dataServices.js" />
     <Content Include="AddTemplates\addLB.html" />
     <Content Include="AddTemplates\dishes.html" />
     <Content Include="AddTemplates\dishes.js" />

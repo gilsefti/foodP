@@ -1,5 +1,5 @@
 
-mainApp.controller("searchCtrl", function ($scope, $state, searchDishes) {
+mainApp.controller("searchCtrl", function ($scope, $state, searchDishes,dataService) {
     $scope.subStr = "";
     //$scope.props.Title = "Select a dish";
   
@@ -7,7 +7,7 @@ mainApp.controller("searchCtrl", function ($scope, $state, searchDishes) {
         searchDishes.searchDis($scope.subStr).then(function (dat) {
             $scope.Dishes = dat.data;
             for (var i = 0; i < $scope.Dishes.length; i++) {
-                //$scope.Dishes[i].imgLink = serverUrl + "api/Files/DishFiles/" + $scope.Dishes[i].ID;
+                $scope.Dishes[i].imgLink = serverUrl + "api/Files/DishFiles/" + $scope.Dishes[i].ID;
 
             }
             $scope.SearchDishes = function () {
@@ -17,6 +17,9 @@ mainApp.controller("searchCtrl", function ($scope, $state, searchDishes) {
         { alert(er) });
     }
     $scope.dishesRows();
-
+    $scope.selectPlate = function (plate) {
+        dataService.dishModel = plate;
+        $state.go("View");
+    }
 });
 

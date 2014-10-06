@@ -1,4 +1,4 @@
-﻿var mainApp = angular.module('Main', ["ui.router", "lbExternalSql", "newDishControllers", "loginServices", "dishSerices"]);
+﻿var mainApp = angular.module('Main', ["ui.router", "lbExternalSql", "newDishControllers", "loginServices", "dataServices"]);
 
 
 mainApp.controller('mainCtrl', function ($scope) {
@@ -33,6 +33,7 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.
         state('LB', { url: '/LB', templateUrl: 'LBTemplates/LunchBox.html', controller: "lunchBoxCtrl" }).
         state('Search', { url: '/Search', templateUrl: 'LBTemplates/Search.html', controller: "searchCtrl" }).
+        state('View', { url: '/View', templateUrl: 'LBTemplates/ViewDish.html', controller: "viewDishCtrl" }).
         //state('Login', { url: '/Login', templateUrl: 'LBTemplates/Login.html', controller: "loginCtrl" }).
                state('FBLogin', { url: '/FBLogin', templateUrl: 'LBTemplates/FBLogin.html', controller: "FBLoginCtrl" }).
           state('new', {
@@ -72,8 +73,9 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
           });
 
  
-    //$urlRouterProvider.otherwise('/FBLogin');
-    $urlRouterProvider.otherwise('/Search');
+    $urlRouterProvider.otherwise('/FBLogin');
+    //$urlRouterProvider.otherwise('/Search');
     //$urlRouterProvider.otherwise('/new/location');
+    //$urlRouterProvider.otherwise('/photo');
 });
 

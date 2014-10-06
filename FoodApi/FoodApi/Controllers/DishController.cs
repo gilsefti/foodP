@@ -33,9 +33,9 @@ namespace FoodApi.Controllers
 
 
 
-        [ActionName("Dishes")]
+        [ActionName("DishesByLocation")]
         ///id parameter is  place Id
-        public List<Dish> GetDishes(int id)
+        public List<Dish> GetDishesByLocation(int id)
         {
             var foodDb = new FoodBl.foodEntities();
             var query = from dish in foodDb.Dishes
@@ -43,6 +43,18 @@ namespace FoodApi.Controllers
                         select dish;
             List<Dish> ls = query.ToList();
             return ls;
+        }
+
+        [ActionName("DishesById")]
+        ///id parameter is  place Id
+        public Dish GetDishesById(int id)
+        {
+            var foodDb = new FoodBl.foodEntities();
+            var query = from dish in foodDb.Dishes
+                        where dish.ID == id
+                        select dish;
+            Dish dis = query.ToList().First();
+            return dis;
         }
 
         [ActionName("AddLB")]

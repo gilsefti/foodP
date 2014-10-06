@@ -1,4 +1,5 @@
 mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
+
     $scope.login = function () {
         if (!window.cordova) {
             var appId = "509210995889450";//prompt("Enter FB Application ID", "");
@@ -13,7 +14,18 @@ mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
             alert("login failed")
         }
 
-        facebookConnectPlugin.login([], success, fail);
+        //facebookConnectPlugin.login([], success, fail);
+        FB.login(
+              function (response) {
+                  if (response.session) {
+                      success();
+                  } else {
+                      fail();
+                  }
+              }, {
+                  scope: ""
+              }
+          );
     }
 
 
@@ -27,6 +39,19 @@ mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
     }
 });
 
+document.addEventListener('deviceready', function () {
+    try {
+        alert('Device is ready! Make sure you set your app_id below this alert.');
+        FB.init({
+            appId: "509210995889450",
+            nativeInterface: CDV.FB,
+            useCachedDialogs: false
+        });
+        document.getElementById('data').innerHTML = "";
+    } catch (e) {
+        alert(e);
+    }
+}, false);
 //function myLogin() {
 //    var appId = "509210995889450";//prompt("Enter FB Application ID", "");
 //    facebookConnectPlugin.browserInit(appId);

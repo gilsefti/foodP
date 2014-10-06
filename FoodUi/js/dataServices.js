@@ -1,4 +1,4 @@
-var dishSerices = angular.module("dishSerices", []);
+var dishSerices = angular.module("dataServices", []);
 
 
 dishSerices.service("dataService", function () {

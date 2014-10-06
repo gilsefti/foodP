@@ -8,3 +8,6 @@ FoodUi.sln
 FoodUi.v12.suo
 .config
 .jshintrc
+cordova.js
+cordova_plugins.js
+appconfig.js

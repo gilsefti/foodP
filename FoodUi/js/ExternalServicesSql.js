@@ -33,14 +33,22 @@ externalServices.service('locations', function ($http) {
 externalServices.service('dishes', function ($http) {
     this.getDishes = function (loc) {
         var dishes = {};
-        var commandUrl = serverUrl + "api/Dish/Dishes/" + loc.ID;
+        var commandUrl = serverUrl + "api/Dish/DishesByLocation/" + loc.ID;
         var promise = $http({
             method: 'GET',
             url: commandUrl
         });
         return promise;
     }
-
+    this.getDishesById = function (id) {
+        var dishes = {};
+        var commandUrl = serverUrl + "api/Dish/DishesById/" + id;
+        var promise = $http({
+            method: 'GET',
+            url: commandUrl
+        });
+        return promise;
+    }
     this.addDish = function (dish) {
         var promise = $http({
             method: 'POST',
