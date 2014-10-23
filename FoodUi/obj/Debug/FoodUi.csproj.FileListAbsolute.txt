@@ -70,7 +70,6 @@ C:\foodAppP\FoodUi\bin\FoodApi.dll
 C:\foodAppP\FoodUi\bin\FoodBl.dll
 C:\foodAppP\FoodUi\bin\System.Web.Http.dll
 C:\foodAppP\FoodUi\bin\System.Net.Http.Formatting.dll
-C:\foodAppP\FoodUi\bin\System.Web.Mvc.dll
 C:\foodAppP\FoodUi\bin\Newtonsoft.Json.dll
 C:\foodAppP\FoodUi\bin\System.Web.Http.Cors.dll
 C:\foodAppP\FoodUi\bin\EntityFramework.dll
@@ -85,7 +84,6 @@ C:\foodAppP\FoodUi\bin\FoodApi.pdb
 C:\foodAppP\FoodUi\bin\FoodBl.pdb
 C:\foodAppP\FoodUi\bin\System.Web.Http.xml
 C:\foodAppP\FoodUi\bin\System.Net.Http.Formatting.xml
-C:\foodAppP\FoodUi\bin\System.Web.Mvc.xml
 C:\foodAppP\FoodUi\bin\Newtonsoft.Json.xml
 C:\foodAppP\FoodUi\bin\System.Web.Http.Cors.xml
 C:\foodAppP\FoodUi\bin\EntityFramework.xml

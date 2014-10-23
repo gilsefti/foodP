@@ -34,13 +34,14 @@ loginServices.service('UserService', function (users, $q) {
                 success(response);
             }
             else
-                FB.api("me/", {},
+                facebookConnectPlugin.api("me/", [],
+                      function (response) {
+                          success(response);  
+                      },
                     function (response) {
-                        if (response.error)
-                            task.reject();
-                        else
-                            success(response);                           
-                    })
+                        task.reject();
+                    });
+                   
         }
         else
             task.resolve();

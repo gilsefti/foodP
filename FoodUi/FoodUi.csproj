@@ -70,12 +70,11 @@
     <Content Include="cat.jpg" />
     <Content Include="cordova.js" />
     <Content Include="cordova_plugins.js" />
-    <Content Include="facebookConnectPlugin - Copy.js" />
+    <Content Include="facebookConnectPlugin.js" />
     <Content Include="index3.html" />
     <Content Include="indexphot.html" />
     <Content Include="js\angular-ui-router.js" />
     <Content Include="js\angular.js" />
-    <Content Include="facebookConnectPlugin.js" />
     <Content Include="LBTemplates\LBExternalSql.js" />
     <Content Include="LBTemplates\FBLogin.html" />
     <Content Include="LBTemplates\FBLogin.js" />
