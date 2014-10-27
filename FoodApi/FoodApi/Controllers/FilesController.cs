@@ -87,33 +87,46 @@ namespace FoodApi.Controllers
           [ActionName("File")]
           public HttpResponseMessage GetFile(int ID)
           {
-              var foodDb = new FoodBl.foodEntities();
-              var data = from i in foodDb.Imgs
-                         where i.ID == ID
-                         select i;
-              FoodBl.Img img = (FoodBl.Img)data.SingleOrDefault();
-              byte[] imgData = img.FileStreem;
-              MemoryStream ms = new MemoryStream(imgData);
-              HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
-              response.Content = new StreamContent(ms);
-              response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
-              return response;
+              try
+              {
+                  var foodDb = new FoodBl.foodEntities();
+                  var data = from i in foodDb.Imgs
+                             where i.ID == ID
+                             select i;
+                  FoodBl.Img img = (FoodBl.Img)data.SingleOrDefault();
+                  byte[] imgData = img.FileStreem;
+                  MemoryStream ms = new MemoryStream(imgData);
+                  HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+                  response.Content = new StreamContent(ms);
+                  response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+                  return response;
+              }
+              catch (Exception ex)
+              {
+                  return null;
+              }
           }
 
           [ActionName("DishFiles")]
           public HttpResponseMessage GetDishFiles(int ID)
           {
-              var foodDb = new FoodBl.foodEntities();
-              var data = from i in foodDb.Imgs
-                         where i.DishId == ID
-                         select i;
-              FoodBl.Img img = (FoodBl.Img)data.SingleOrDefault();
-              byte[] imgData = img.FileStreem;
-              MemoryStream ms = new MemoryStream(imgData);
-              HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
-              response.Content = new StreamContent(ms);
-              response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
-              return response;
+              try
+              {
+                  var foodDb = new FoodBl.foodEntities();
+                  var data = from i in foodDb.Imgs
+                             where i.DishId == ID
+                             select i;
+                  FoodBl.Img img = (FoodBl.Img)data.SingleOrDefault();
+                  byte[] imgData = img.FileStreem;
+                  MemoryStream ms = new MemoryStream(imgData);
+                  HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+                  response.Content = new StreamContent(ms);
+                  response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+                  return response;
+              }
+              catch (Exception ex) {
+                  return null;
+              }
           }   
     }
 }

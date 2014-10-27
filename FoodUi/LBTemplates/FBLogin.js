@@ -1,29 +1,29 @@
 mainApp.controller('FBLoginCtrl', function ($scope, UserService, $state) {
 
     $scope.fbLogin = function () {
-        $state.go("Search"); 
+    
         if (!window.cordova) {
             var appId = "509210995889450";//prompt("Enter FB Application ID", "");
             facebookConnectPlugin.browserInit(appId);
         }
-        var success = function () {           
-                $state.go("LB");  
+        var success = function (response) {          
+            $state.go("LB");
         }
-        var fail = function () {
-            alert("login failed")
+        var fail = function (response) {
+            alert(JSON.stringify(response));
         }
 
-        facebookConnectPlugin.login([], success, fail);
-   
+        facebookConnectPlugin.login(["email"], success, fail);
+
     }
 
-   
+
 
     $scope.logout = function () {
         facebookConnectPlugin.logout(success, fail);
         var success = function (response) {
-        
-         
+
+
         }
         var fail = function (response) { alert("logout failed") }
     }

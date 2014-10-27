@@ -1,0 +1,6 @@
+cd C:\foodAppP\CertificateIOS
+C:\OpenSSL-Win64\bin\openssl  genrsa -out mykey.key 2048
+C:\OpenSSL-Win64\bin\openssl req -new -key mykey.key -out CertificateSigningRequest.certSigningRequest -subj "/emailAddress=jivangilad@yahoo.com, CN=Gilad, C=IL"
+load CertificateSigningRequest.certSigningRequest file to apple
+C:\OpenSSL-Win64\bin\openssl x509 -in ios_distribution.cer -inform DER -out ios_distribution.pem -outform PEM 
+C:\OpenSSL-Win64\bin\openssl pkcs12 -export -inkey mykey.key -in ios_distribution.pem -out iphone_dist.p12 
