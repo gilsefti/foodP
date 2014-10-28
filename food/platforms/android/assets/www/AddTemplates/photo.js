@@ -16,10 +16,10 @@ newDishControllers.service('fileUpload', function ($http, $state,dataService) {
         ft.upload(ImageURI, serverUrl + "api/Files/Save", win, fail, options);
     }
     function win(r) {
-        $state.go("new.addLB");
+        $state.go("Main.new.addLB");
     }
     function fail(r) {
-        $state.go("new.addLB");
+        $state.go("Main.new.addLB");
     }
 });
 
@@ -29,7 +29,7 @@ newDishControllers.config(['$compileProvider',
     }
 ]);
 newDishControllers.controller("photoCtrl", function ($scope, $state, fileUpload) {
-    $scope.props.Title = "Add a photo";
+    //$scope.props.Title = "Add a photo";
     $scope.addPhoto = function () {
         navigator.camera.getPicture(onSuccess, onFail, {
             quality: 50,

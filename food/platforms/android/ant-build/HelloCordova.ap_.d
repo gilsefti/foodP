@@ -212,6 +212,7 @@ C:\foodAppP\food\platforms\android\assets\www\indexphot.html \
 C:\foodAppP\food\platforms\android\assets\www\js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates \
 C:\foodAppP\food\platforms\android\assets\www\Main.js \
+C:\foodAppP\food\platforms\android\assets\www\MainParent.html \
 C:\foodAppP\food\platforms\android\assets\www\mobile-angular-ui \
 C:\foodAppP\food\platforms\android\assets\www\plugins \
 C:\foodAppP\food\platforms\android\assets\www\test.html \

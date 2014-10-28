@@ -29,7 +29,7 @@ newDishControllers.controller('locationsCtrl', function ($scope, $state, locatio
     }
     $scope.selectLocal = function (loc) {
         dataService.locModel = loc;
-        $state.go("new.dish");
+        $state.go("Main.new.dish");
     };
 });
 

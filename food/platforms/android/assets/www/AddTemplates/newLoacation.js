@@ -7,7 +7,7 @@ newDishControllers.controller('newLocationCtrl', function ($scope, $state, locat
     $scope.addLocation = function () {
         locations.addLocation($scope.locModel).then(function (loc) {
             dataService.locModel = loc;
-            $state.go("new.dish");
+            $state.go("Main.new.dish");
         });
     }
 });

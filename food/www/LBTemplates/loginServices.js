@@ -19,12 +19,11 @@ loginServices.service('UserService', function (users, $q) {
                 userData.FBID = data.FacebookID;
                 userData.isLogged = true;
                 task.resolve();
-                //$state.go("Search");
-                //window.location.href("lunchBox.html");
+              
             }).catch(function (ex) {
                 alert(ex);
                 task.reject();
-                //throw ex;
+            
             });
         }
 

@@ -17,16 +17,7 @@
     <title>Lunch box</title>
 </head>
 
-<body ng-app="Main" ng-controller="mainCtrl">
-
-    <nav class="navbar navbar-default" role="navigation">
-        <ul class="nav nav-tabs">
-            <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
-                <a ui-sref="{{tab.link}}" ng-click="setSelectedTab(tab)">{{tab.label}}</a>
-            </li>
-        </ul>
-    </nav>
-
+<body ng-app="Main" ng-controller="mainCtrl">    
 
     <div ui-view></div>
     <div id="fb-root"></div>

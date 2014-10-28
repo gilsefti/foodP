@@ -1,12 +1,15 @@
 ﻿var mainApp = angular.module('Main', ["ui.router", "lbExternalSql", "newDishControllers", "loginServices", "dataServices"]);
 
+mainApp.controller('mainCtrl', function ($scope, $state) {
+
+});
 //mainApp.run(function ($state, $rootScope)
 //{ $rootScope.$state = $state; });
-mainApp.controller('mainCtrl', function ($scope,$state) {
+mainApp.controller('mainTemplateCtrl', function ($scope,$state) {
     $scope.tabs = [
-            { link: 'LB', label: 'Lunch Box' },
-            { link: 'Search', label: 'Search' },
-                 { link: 'new.location', label: 'Add to LB' },
+            { link: 'Main.LB', label: 'Lunch Box' },
+            { link: 'Main.Search', label: 'Search' },
+                 { link: 'Main.new.location', label: 'Add to LB' },
     ];
 
     $scope.selectedTab = $scope.tabs[0];
@@ -33,30 +36,35 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
 
 
     $stateProvider.
-        state('LB', { url: '/LB', templateUrl: 'LBTemplates/LunchBox.html', controller: "lunchBoxCtrl" }).
-        state('Search', {
+         state('Main', {
+             url: '/Main',
+             templateUrl: 'MainParent.html',
+             controller: 'mainTemplateCtrl'
+         }).
+        state('Main.LB', { url: '/LB', templateUrl: 'LBTemplates/LunchBox.html', controller: "lunchBoxCtrl" }).
+        state('Main.Search', {
             url: '/Search', templateUrl: 'LBTemplates/Search.html', controller: "searchCtrl"
             //, onEnter: function ($rootScope) {
             //    $rootScope.$broadcast('selectTabChanged', 'Search');
             //}
         }).
-        state('View', { url: '/View', templateUrl: 'LBTemplates/ViewDish.html', controller: "viewDishCtrl" }).
+        state('Main.View', { url: '/View', templateUrl: 'LBTemplates/ViewDish.html', controller: "viewDishCtrl" }).
         //state('Login', { url: '/Login', templateUrl: 'LBTemplates/Login.html', controller: "loginCtrl" }).
                state('FBLogin', { url: '/FBLogin', templateUrl: 'LBTemplates/FBLogin.html', controller: "FBLoginCtrl" }).
-          state('new', {
+          state('Main.new', {
               url: '/new',
               templateUrl: 'AddTemplates/AddParent.html',
               controller: 'AddParentCtrl'
-          }).state('new.location', {
+          }).state('Main.new.location', {
               url: '/location',
               templateUrl: 'AddTemplates/locations.html',
               controller: 'locationsCtrl'
-          }).state("new.newLocation", {
+          }).state("Main.new.newLocation", {
               url: '/newLocation',
               templateUrl: "AddTemplates/newLocation.html",
               controller: "newLocationCtrl"
           })
-        .state("new.dish", {
+        .state("Main.new.dish", {
             url: '/dish',
             templateUrl: "AddTemplates/dishes.html",
             controller: "dishCtrl"
@@ -64,16 +72,16 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
             url: '/photo',
             templateUrl: 'AddTemplates/photo.html',
             controller: 'photoCtrl'
-        }).state('new.newDish', {
+        }).state('Main.new.newDish', {
             url: '/newDish',
             templateUrl: 'AddTemplates/newDish.html',
             controller: 'newDishCtrl'
         })
-        .state('new.addLB', {
+        .state('Main.new.addLB', {
             url: '/addLB',
             templateUrl: 'AddTemplates/addLB.html',
             controller: 'addLBCtrl'
-        }).state('new.fileLoad', {
+        }).state('Main.new.fileLoad', {
             url: '/fileLoad',
             templateUrl: 'AddTemplates/fileLoad.html',
             controller: 'fileLoadCtrl'
@@ -81,8 +89,8 @@ mainApp.config(function ($stateProvider, $urlRouterProvider) {
 
 
     $urlRouterProvider.otherwise('/FBLogin');
-    //$urlRouterProvider.otherwise('/Search');
-    //$urlRouterProvider.otherwise('/new/location');
+    //$urlRouterProvider.otherwise('/Main/Search');
+    //$urlRouterProvider.otherwise('Main/new/location');
     //$urlRouterProvider.otherwise('/photo');
 });
 

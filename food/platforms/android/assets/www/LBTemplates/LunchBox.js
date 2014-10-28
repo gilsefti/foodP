@@ -17,11 +17,11 @@ mainApp.controller("lunchBoxCtrl", function ($scope, $state, LBDishes, UserServi
 
 
     $scope.addDish = function () {
-        $state.go("newDish");
+        $state.go("Main.new.newDish");
     };
     $scope.getDish = function (dish) {
         dataService.dishModel = dish;
-        $state.go("addLB");
+        $state.go("Main.new.addLB");
     };
 });
 

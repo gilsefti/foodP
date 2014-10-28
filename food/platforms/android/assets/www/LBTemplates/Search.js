@@ -19,7 +19,7 @@ mainApp.controller("searchCtrl", function ($scope, $state, searchDishes,dataServ
     $scope.dishesRows();
     $scope.selectPlate = function (plate) {
         dataService.dishModel = plate;
-        $state.go("View");
+        $state.go("Main.View");
     }
 });
 
