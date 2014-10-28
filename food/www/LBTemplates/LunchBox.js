@@ -1,8 +1,9 @@
 
 mainApp.controller("lunchBoxCtrl", function ($scope, $state, LBDishes, UserService) {
     //$scope.props.Title = "Select a dish";
-    var promiseA = UserService.initUser();
-    promiseA.then(function () {
+    $scope.LBPlates = {};
+   
+   
         LBDishes.getDishes(UserService.user().ID).then(function (d) {
             $scope.LBPlates = d;
             for (var i = 0; i < $scope.LBPlates.length; i++) {
@@ -10,9 +11,8 @@ mainApp.controller("lunchBoxCtrl", function ($scope, $state, LBDishes, UserServi
                 //Do something
             }
         });
-    }).catch(function (er)
-    { alert(er) });
-    $scope.LBPlates = {};
+   
+  
     //dataService.dishModel = {};
 
 

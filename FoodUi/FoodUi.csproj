@@ -89,6 +89,7 @@
     <Content Include="LBTemplates\LunchBox.html" />
     <Content Include="index.html" />
     <Content Include="Main.js" />
+    <Content Include="MainParent.html" />
     <Content Include="mobile-angular-ui\fonts\fontawesome-webfont.eot" />
     <Content Include="mobile-angular-ui\fonts\fontawesome-webfont.ttf" />
     <Content Include="mobile-angular-ui\fonts\fontawesome-webfont.woff" />

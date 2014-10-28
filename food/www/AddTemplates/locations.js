@@ -4,12 +4,26 @@ newDishControllers.controller('locationsCtrl', function ($scope, $state, locatio
     dataService.locModel = {};
     dataService.dishModel = {};
 
+
+    $scope.subStr = "";
+ 
+    $scope.locationRows = function () {
+        locations.getLocations($scope.subStr).then(function (dat) {
+            $scope.locals = dat.data;      
+        }).catch(function (er)
+        { alert(er) });
+    }
+    $scope.locationRows();
+
+
+
+
     $scope.props.Title = "Where did you get the dish?";
-    locations.getLocations().then(function (d) {
-        $scope.locals = d.data;
-    }).catch(function (error) {
-        alert(error);    // Where the error is actually caught.
-    });
+    //locations.getLocations().then(function (d) {
+    //    $scope.locals = d.data;
+    //}).catch(function (error) {
+    //    alert(error);    // Where the error is actually caught.
+    //});
     $scope.addLocation = function () {
         $state.go("new.newLocation");     
     }

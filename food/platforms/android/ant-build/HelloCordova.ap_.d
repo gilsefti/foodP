@@ -204,6 +204,7 @@ C:\foodAppP\food\platforms\android\assets\www\cordova_plugins.js \
 C:\foodAppP\food\platforms\android\assets\www\css \
 C:\foodAppP\food\platforms\android\assets\www\dishServices.js \
 C:\foodAppP\food\platforms\android\assets\www\engineapp \
+C:\foodAppP\food\platforms\android\assets\www\facebookConnectPlugin.js \
 C:\foodAppP\food\platforms\android\assets\www\index.html \
 C:\foodAppP\food\platforms\android\assets\www\index3.html \
 C:\foodAppP\food\platforms\android\assets\www\indexFB.html \
@@ -241,6 +242,7 @@ C:\foodAppP\food\platforms\android\assets\www\engineapp\index.yaml \
 C:\foodAppP\food\platforms\android\assets\www\engineapp\main.py \
 C:\foodAppP\food\platforms\android\assets\www\js\angular-ui-router.js \
 C:\foodAppP\food\platforms\android\assets\www\js\angular.js \
+C:\foodAppP\food\platforms\android\assets\www\js\dataServices.js \
 C:\foodAppP\food\platforms\android\assets\www\js\ExternalServices.js \
 C:\foodAppP\food\platforms\android\assets\www\js\ExternalServicesSql.js \
 C:\foodAppP\food\platforms\android\assets\www\js\facebookConnectPlugin.js \
@@ -253,6 +255,9 @@ C:\foodAppP\food\platforms\android\assets\www\LBTemplates\loginServices.js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\LunchBox.html \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\LunchBox.js \
 C:\foodAppP\food\platforms\android\assets\www\LBTemplates\Search.html \
+C:\foodAppP\food\platforms\android\assets\www\LBTemplates\Search.js \
+C:\foodAppP\food\platforms\android\assets\www\LBTemplates\ViewDish.html \
+C:\foodAppP\food\platforms\android\assets\www\LBTemplates\ViewDish.js \
 C:\foodAppP\food\platforms\android\assets\www\mobile-angular-ui\css \
 C:\foodAppP\food\platforms\android\assets\www\mobile-angular-ui\fonts \
 C:\foodAppP\food\platforms\android\assets\www\mobile-angular-ui\js \

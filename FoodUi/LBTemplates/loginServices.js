@@ -22,6 +22,7 @@ loginServices.service('UserService', function (users, $q) {
                 //$state.go("Search");
                 //window.location.href("lunchBox.html");
             }).catch(function (ex) {
+                alert(ex);
                 task.reject();
                 //throw ex;
             });
@@ -39,6 +40,7 @@ loginServices.service('UserService', function (users, $q) {
                           success(response);  
                       },
                     function (response) {
+                       alert( JSON.stringify(response));
                         task.reject();
                     });
                    

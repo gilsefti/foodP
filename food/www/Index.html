@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <div id="fb-root"></div>
 
@@ -10,9 +11,30 @@
     <link rel="stylesheet" href="mobile-angular-ui/css/mobile-angular-ui-desktop.min.css">
     <link href="css/lunch.css" rel="stylesheet" />
 
-    <script src="appconfig.js"></script>
+
+    <!--    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>-->
+
+    <title>Lunch box</title>
+</head>
+
+<body ng-app="Main" ng-controller="mainCtrl">
+
+    <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav nav-tabs">
+            <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
+                <a ui-sref="{{tab.link}}" ng-click="setSelectedTab(tab)">{{tab.label}}</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div ui-view></div>
+    <div id="fb-root"></div>
+    <!-- cordova -->
     <script src="cordova.js"></script>
-    <script src="cordova_plugins.js"></script>
+    <script src="facebookConnectPlugin.js"></script>
+
+    <script src="appconfig.js"></script>
 
 
 
@@ -20,50 +42,36 @@
     <!--<script src="js/angular-route.js"></script>-->
     <script src="js/angular-ui-router.js"></script>
     <script src="js/ExternalServicesSql.js"></script>
-   
+
 
     <script src="LBTemplates/LBExternalSql.js"></script>
-    <script src="js/facebookConnectPlugin.js"></script>
+    <!--<script src="facebookConnectPlugin.js"></script>-->
 
     <script src="Main.js"></script>
     <script src="LBTemplates/loginServices.js"></script>
     <script src="LBTemplates/Login.js"></script>
     <script src="LBTemplates/FBLogin.js"></script>
-    <script src="dishServices.js"></script>
- 
+    <script src="js/dataServices.js"></script>
+    <script src="LBTemplates/Search.js"></script>
+    <script src="LBTemplates/ViewDish.js"></script>
+
+
     <script src="LBTemplates/LunchBox.js"></script>
-  
+
 
 
 
     <script src="js/ExternalServicesSql.js"></script>
- 
+
     <script src="AddTemplates/locations.js"></script>
     <script src="AddTemplates/newLoacation.js"></script>
-    
+
     <script src="AddTemplates/dishes.js"></script>
     <script src="AddTemplates/newDish.js"></script>
     <script src="AddTemplates/addLB.js"></script>
-  <script src="AddTemplates/photo.js"></script>
+    <script src="AddTemplates/photo.js"></script>
     <script src="AddTemplates/fileLoad.js"></script>
-  
-    <!--    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>-->
-
-    <title>Lunch box</title>
-</head>
-
-<body ng-app="Main" ng-controller="mainCtrl">
- 
-    <nav class="navbar navbar-default" role="navigation">
-        <ul class="nav nav-tabs">
-            <li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
-                <a ui-sref="{{tab.link}}" ng-click="setSelectedTab(tab)">{{tab.label}}</a>
-            </li>                
-        </ul>
-    </nav>
-
-   
-    <div ui-view></div>
 </body>
+
 </html>
 

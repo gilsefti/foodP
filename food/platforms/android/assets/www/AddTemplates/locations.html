@@ -1,13 +1,20 @@
 <form role="form">
     <div class="input-group">
-        <input type="search" class="form-control " placeholder="Search places" ng-model="locModel.Name">
-            <span class="input-group-btn">
-                    <button type="button" class="btn btn-default ">
-                        <span class="fa fa-search"></span>
-                    </button>
-            </span>
+        <input type="search" class="form-control " placeholder="Search places" ng-change="locationRows()" ng-model="subStr">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default ">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
     </div>
 
+
+    <!--<div class="input-group">
+        <input type="search" class="form-control " placeholder="Search dish" ng-change="dishesRows()" ng-model="subStr">
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>-->
 
     <div class="panel panel-default">
         <button type="button" class="btn btn-primary btn-lg btn-block " ng-click="addLocation()">

@@ -9,10 +9,11 @@ externalServices.config(function ($httpProvider) {
 
 
 externalServices.service('locations', function ($http) {
-    this.getLocations = function () {
-        var locations = {};
+    this.getLocations = function (subStr) {
+        var dat = { 'subStr': subStr };
         var promise = $http({
-            method: 'GET',
+            method: 'POST',
+            data:dat,
             url: serverUrl + "api/Location/Places"
         });
         return promise;
@@ -32,14 +33,22 @@ externalServices.service('locations', function ($http) {
 externalServices.service('dishes', function ($http) {
     this.getDishes = function (loc) {
         var dishes = {};
-        var commandUrl = serverUrl + "api/Dish/Dishes/" + loc.ID;
+        var commandUrl = serverUrl + "api/Dish/DishesByLocation/" + loc.ID;
         var promise = $http({
             method: 'GET',
             url: commandUrl
         });
         return promise;
     }
-
+    this.getDishesById = function (id) {
+        var dishes = {};
+        var commandUrl = serverUrl + "api/Dish/DishesById/" + id;
+        var promise = $http({
+            method: 'GET',
+            url: commandUrl
+        });
+        return promise;
+    }
     this.addDish = function (dish) {
         var promise = $http({
             method: 'POST',

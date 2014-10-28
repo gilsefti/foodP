@@ -87,7 +87,6 @@ C:\foodAppP\FoodUi\bin\System.Net.Http.Formatting.xml
 C:\foodAppP\FoodUi\bin\Newtonsoft.Json.xml
 C:\foodAppP\FoodUi\bin\System.Web.Http.Cors.xml
 C:\foodAppP\FoodUi\bin\EntityFramework.xml
-C:\foodAppP\FoodUi\bin\ImageResizer.xml
 C:\foodAppP\FoodUi\bin\System.Web.Http.WebHost.xml
 C:\foodAppP\FoodUi\bin\System.Web.Razor.xml
 C:\foodAppP\FoodUi\bin\System.Web.WebPages.Razor.xml

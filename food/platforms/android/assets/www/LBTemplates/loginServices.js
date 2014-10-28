@@ -1,14 +1,14 @@
 ﻿var loginServices = angular.module('loginServices', ["externalServices"]);
 
-loginServices.service('UserService', function (users,$q) {
-
+loginServices.service('UserService', function (users, $q) {
+    
     var userData = {
         isLogged: false,
         username: '',
         ID: '',
-        FBID:''
+        FBID: ''
     };
-   
+
     this.initUser = function () {
         var task = $q.defer();
         var success = function (response) {
@@ -22,17 +22,31 @@ loginServices.service('UserService', function (users,$q) {
                 //$state.go("Search");
                 //window.location.href("lunchBox.html");
             }).catch(function (ex) {
+                alert(ex);
                 task.reject();
                 //throw ex;
             });
         }
 
-      
-        facebookConnectPlugin.api("me/", [],
-                  success,
-                   function (response) {
-                       task.reject();
-                   });
+        if (userData.ID == '')
+        {
+            if (initializeUser) {
+                var response = { id: 10152713949253828 }
+                success(response);
+            }
+            else
+                facebookConnectPlugin.api("me/", [],
+                      function (response) {
+                          success(response);  
+                      },
+                    function (response) {
+                       alert( JSON.stringify(response));
+                        task.reject();
+                    });
+                   
+        }
+        else
+            task.resolve();
         return task.promise;
     }
     this.user = function () {

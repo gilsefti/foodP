@@ -1,1 +1,21 @@
-﻿Search
+﻿<form class="navbar-form" role="search">
+
+    <div class="input-group">
+        <input type="search" class="form-control " placeholder="Search dish" ng-change="dishesRows()" ng-model="subStr">        
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</form>
+<div class="panel panel-default">
+    <div class="list-group">
+        <div class="row">
+
+            <a ng-repeat="plate in Dishes" ng-click="selectPlate(plate)" class="list-group-item " href="">
+                <div class="col-xs-7"> {{plate.Name}}</div>
+                <div class="col-xs-5"> <img ng-src="{{plate.imgLink}}" /></div>
+                <div class="clearfix visible-xs-block"></div>
+            </a>
+        </div>
+    </div>
+</div>
